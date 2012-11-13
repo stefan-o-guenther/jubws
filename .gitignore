@@ -2,3 +2,13 @@
 .classpath
 .settings
 target
+*~
+*.aux
+*.log
+*.nav
+*.out
+*.pyg
+*.snm
+*.toc
+*.vrb
+*.pdf
