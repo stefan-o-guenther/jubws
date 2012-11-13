@@ -1,0 +1,80 @@
+\documentclass[compress,english]{beamer}
+
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{fontspec}
+\usepackage{default}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+
+\usemintedstyle{default}
+
+\usetheme{Warsaw}
+\usecolortheme{default}
+\usefonttheme{professionalfonts}
+
+\useoutertheme[footline=authortitle]{miniframes}
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\title{Analysis Milestone}
+\author{Axel Sonntag, Stefan Günter, Kevin Walter}
+\institute{Hochschule Aalen}
+
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+  \oldmacro\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+
+\begin{document}
+\definecolor{bg}{rgb}{0.90,0.90,0.90}
+\renewcommand{\theFancyVerbLine}{
+  \sffamily\textcolor[rgb]{0.5,0.5,0.5}{\scriptsize\arabic{FancyVerbLine}}}
+
+  
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+
+
+\section{Tool Decisions}
+\begin{frame}[fragile,c]
+\begin{block}{Tool Decisions}
+  \input{analysis_tool_decisions.tex}
+\end{block}
+\end{frame}
+
+
+\section{Status Overview}
+\begin{frame}[fragile,c]
+\begin{block}{Status Overview}
+  \input{analysis_status_overview.tex}
+\end{block}
+\end{frame}
+
+\section{Issues}
+\begin{frame}[fragile,c]
+\begin{block}{Issues}
+  \input{analysis_issues.tex}
+\end{block}
+\end{frame}
+
+\section{Future Plans}
+\begin{frame}[fragile,c]
+\begin{block}{Future Plans}
+  \input{analysis_future_plans.tex}
+\end{block}
+\end{frame}
+
+
+\end{document}
