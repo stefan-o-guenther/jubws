@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.htwaalen</groupId>
 	<artifactId>jubws</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.0</version>
 	<name>jubws</name>
 	<description>Webservice for JUnitBenchmarks</description>
 	<dependencies>

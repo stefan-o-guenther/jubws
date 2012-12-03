@@ -1,5 +1,6 @@
 package de.htwaalen.jubws.server;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import de.htwaalen.jubws.BenchmarkResult;
 @WebService
 public interface JUnitService {
 	
-    void runBenchmark(String classname) throws MalformedURLException, ClassNotFoundException;
+    void runBenchmark(String path, String classname) throws MalformedURLException, ClassNotFoundException, IOException;
     
     
     @XmlElementWrapper(required = true)

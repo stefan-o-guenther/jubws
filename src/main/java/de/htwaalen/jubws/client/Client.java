@@ -29,7 +29,7 @@ public class Client {
         int sizeBefore = junit.getResults().size();
         
         
-        junit.runBenchmark("de.htwaalen.jubws.DemoBenchmark");
+        junit.runBenchmark("file:///home/lucid/Dropbox/htw-aalen/SQM/Aufgaben/benchmarks/target/benchmarks-1.0.0.jar","de.htwaalen.benchmarks.DemoBenchmark");
         
         List<BenchmarkResult> results = junit.getResults();
         

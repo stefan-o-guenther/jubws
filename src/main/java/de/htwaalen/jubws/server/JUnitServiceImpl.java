@@ -1,7 +1,10 @@
 package de.htwaalen.jubws.server;
 
 
+import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.List;
 
 import javax.jws.WebService;
@@ -15,18 +18,17 @@ import de.htwaalen.jubws.ListConsumer;
 @WebService(endpointInterface = "de.htwaalen.jubws.server.JUnitService")
 public class JUnitServiceImpl implements JUnitService {
 
-	private ClassLoader classloader;
 	
 	public JUnitServiceImpl() {
-			classloader = JUnitServiceImpl.class.getClassLoader();
 	}
-	
+
 	@Override
-	public void runBenchmark(String classname) throws MalformedURLException, ClassNotFoundException {
+	public void runBenchmark(String path, String classname) throws ClassNotFoundException, IOException {
 		System.out.println("called run(\"" + classname + "\")");
-		
-		Class<?> clazz = classloader.loadClass(classname);
-		JUnitCore.runClasses(clazz);
+		//TODO improve error handling
+		try(URLClassLoader classloader = new URLClassLoader(new URL[]{new URL(path)})){
+			JUnitCore.runClasses(classloader.loadClass(classname));
+		}
 	}
 
 	@Override
