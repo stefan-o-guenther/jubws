@@ -10,9 +10,20 @@ import com.carrotsearch.junitbenchmarks.IResultsConsumer;
 import com.carrotsearch.junitbenchmarks.Result;
 
 
-public class DemoConsumer implements IResultsConsumer{
+public class ListConsumer implements IResultsConsumer{
 
-
+	private static final List<BenchmarkResult> results = new LinkedList<BenchmarkResult>();
+	
+	
+	
+	private static void addResult(BenchmarkResult result){
+		results.add(result);
+	}
+	
+	
+	public static List<BenchmarkResult> getResults(){
+		return results;
+	}
 
 	@Override
 	public void accept(Result result) throws IOException {
@@ -28,7 +39,7 @@ public class DemoConsumer implements IResultsConsumer{
 		r.setRoundStddev(result.roundAverage.stddev);
 		r.setGcTime(result.gcInfo.accumulatedTime());
 		r.setGcInvocations((int)result.gcInfo.accumulatedInvocations());
-		Benchmarks.addResult(r);
+		addResult(r);
 	}
 
 }

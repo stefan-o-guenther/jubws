@@ -16,7 +16,7 @@ public class DemoBenchmark {
 	
 	
   @Rule
-  public MethodRule benchmarkRun = new BenchmarkRule(new DemoConsumer());
+  public MethodRule benchmarkRun = new BenchmarkRule(new ListConsumer());
  
   
   @Test
