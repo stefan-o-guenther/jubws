@@ -2,6 +2,7 @@
 .classpath
 .settings
 target
+doc/generated
 *~
 *.aux
 *.log
