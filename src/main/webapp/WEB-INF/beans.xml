@@ -8,9 +8,11 @@
 
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 
+
 	<jaxws:endpoint 
 	  id="junitservice" 
-	  implementor="de.htwaalen.jubws.server.JUnitServiceImpl" 
+	  implementor="de.htwaalen.jubws.server.JUnitBenchmarkWebServiceImpl" 
 	  address="/junitservice" />
 	  
+
 </beans>

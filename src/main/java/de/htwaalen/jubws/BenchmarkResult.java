@@ -1,145 +1,139 @@
 package de.htwaalen.jubws;
 
 import java.util.Calendar;
+import java.util.LinkedList;
+import java.util.List;
+
 
 public class BenchmarkResult {
 
+	private String className;
 	private Calendar date;
+	private List<BenchmarkMethod> methods;
+
 	
-	private String classname;
-	private String testname;
-	
-	private double roundAvg;
-	private double roundStddev;
-	
-	private int gcInvocations;
-	private double gcTime;
-	
-	private int benchmarkRounds;
-	private int warmupRounds;
-    private long warmupTime;
-    private long benchmarkTime;
-    
-    public BenchmarkResult() {
+	static class BenchmarkMethod {
+		
+		private String methodName;
+		private double roundAvg;
+		private double roundStddev;
+
+		private int gcInvocations;
+		private double gcTime;
+
+		private int benchmarkRounds;
+		private int warmupRounds;
+		private long warmupTime;
+		private long benchmarkTime;
+		
+		public BenchmarkMethod() {
+		}
+
+		public String getMethodName() {
+			return methodName;
+		}
+
+		public void setMethodName(String methodName) {
+			this.methodName = methodName;
+		}
+
+		public double getRoundAvg() {
+			return roundAvg;
+		}
+
+		public void setRoundAvg(double roundAvg) {
+			this.roundAvg = roundAvg;
+		}
+
+		public double getRoundStddev() {
+			return roundStddev;
+		}
+
+		public void setRoundStddev(double roundStddev) {
+			this.roundStddev = roundStddev;
+		}
+
+		public int getGcInvocations() {
+			return gcInvocations;
+		}
+
+		public void setGcInvocations(int gcInvocations) {
+			this.gcInvocations = gcInvocations;
+		}
+
+		public double getGcTime() {
+			return gcTime;
+		}
+
+		public void setGcTime(double gcTime) {
+			this.gcTime = gcTime;
+		}
+
+		public int getBenchmarkRounds() {
+			return benchmarkRounds;
+		}
+
+		public void setBenchmarkRounds(int benchmarkRounds) {
+			this.benchmarkRounds = benchmarkRounds;
+		}
+
+		public int getWarmupRounds() {
+			return warmupRounds;
+		}
+
+		public void setWarmupRounds(int warmupRounds) {
+			this.warmupRounds = warmupRounds;
+		}
+
+		public long getWarmupTime() {
+			return warmupTime;
+		}
+
+		public void setWarmupTime(long warmupTime) {
+			this.warmupTime = warmupTime;
+		}
+
+		public long getBenchmarkTime() {
+			return benchmarkTime;
+		}
+
+		public void setBenchmarkTime(long benchmarkTime) {
+			this.benchmarkTime = benchmarkTime;
+		}
+		
+		
+		
 	}
-    
-    
-    
-    public Calendar getDate() {
+
+	public BenchmarkResult() {
+		methods = new LinkedList<>();
+	}
+	
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
+
+	public Calendar getDate() {
 		return date;
 	}
 
 	public void setDate(Calendar date) {
 		this.date = date;
 	}
-    
-    public String getClassname() {
-		return classname;
+
+	public List<BenchmarkMethod> getMethods() {
+		return methods;
 	}
 
-	public void setClassname(String classname) {
-		this.classname = classname;
+	public void setMethods(List<BenchmarkMethod> methods) {
+		this.methods = methods;
 	}
 
-	public String getTestname() {
-		return testname;
-	}
-
-	public void setTestname(String testname) {
-		this.testname = testname;
-	}
-    
-	public int getBenchmarkRounds() {
-		return benchmarkRounds;
-	}
 	
-	public void setBenchmarkRounds(int benchmarkRounds) {
-		this.benchmarkRounds = benchmarkRounds;
-	}
-	
-	public int getWarmupRounds() {
-		return warmupRounds;
-	}
-	
-	public void setWarmupRounds(int warmupRounds) {
-		this.warmupRounds = warmupRounds;
-	}
-	
-	public long getWarmupTime() {
-		return warmupTime;
-	}
-	
-	public void setWarmupTime(long warmupTime) {
-		this.warmupTime = warmupTime;
-	}
-	
-	public long getBenchmarkTime() {
-		return benchmarkTime;
-	}
-	
-	public void setBenchmarkTime(long benchmarkTime) {
-		this.benchmarkTime = benchmarkTime;
-	}
-	
-    public double getRoundAvg() {
-		return roundAvg;
-	}
 
-	public void setRoundAvg(double roundAvg) {
-		this.roundAvg = roundAvg;
-	}
 
-	public double getRoundStddev() {
-		return roundStddev;
-	}
-
-	public void setRoundStddev(double roundStddev) {
-		this.roundStddev = roundStddev;
-	}
-
-	public int getGcInvocations() {
-		return gcInvocations;
-	}
-
-	public void setGcInvocations(int gcInvocations) {
-		this.gcInvocations = gcInvocations;
-	}
-
-	public double getGcTime() {
-		return gcTime;
-	}
-
-	public void setGcTime(double gcTime) {
-		this.gcTime = gcTime;
-	}
-
-	@Override
-    public String toString() {
-    	StringBuffer sb = new StringBuffer();
-    	sb.append("date: ");
-    	sb.append(date);
-    	sb.append(" classname: ");
-    	sb.append(classname);
-    	sb.append(" testname: ");
-    	sb.append(testname);
-    	sb.append(" benchmarkRounds: ");
-    	sb.append(benchmarkRounds);
-    	sb.append(" warmupRounds: ");
-    	sb.append(warmupRounds);
-    	sb.append(" warmupTime: ");
-    	sb.append(warmupTime);
-    	sb.append(" benchmarkTime: ");
-    	sb.append(benchmarkTime);
-    	sb.append(" roundAvg: ");
-    	sb.append(roundAvg);
-    	sb.append(" roundStddev: ");
-    	sb.append(roundStddev);
-    	sb.append(" gcInvocations: ");
-    	sb.append(gcInvocations);
-    	sb.append(" gcTime: ");
-    	sb.append(gcTime);
-    	
-    	return sb.toString();
-    }
-	
 }

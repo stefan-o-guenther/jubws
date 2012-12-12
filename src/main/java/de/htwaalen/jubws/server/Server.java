@@ -9,7 +9,7 @@ public class Server {
 
     public static void main(String args[]) throws Exception {
         System.out.println("Starting Server");
-        JUnitService implementor = new JUnitServiceImpl();
+        JUnitBenchmarkWebService implementor = new JUnitBenchmarkWebServiceImpl();
         String address = "http://localhost:9000/junitservice";
         Endpoint.publish(address, implementor);
 

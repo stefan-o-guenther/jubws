@@ -16,7 +16,7 @@ public class DemoBenchmark {
 	
 	
   @Rule
-  public MethodRule benchmarkRun = new BenchmarkRule(new ListConsumer());
+  public MethodRule benchmarkRun = new BenchmarkRule(new WebServiceConsumer());
  
   
   @Test
@@ -24,6 +24,7 @@ public class DemoBenchmark {
   public void twentyMillis() throws Exception {
     Thread.sleep(20);
   }
+  
   
   @Test
   @BenchmarkOptions(callgc = false, benchmarkRounds = 20, warmupRounds = 3)
