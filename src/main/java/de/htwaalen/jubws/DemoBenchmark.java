@@ -3,10 +3,7 @@ package de.htwaalen.jubws;
 
 import org.junit.Rule;
 import org.junit.Test;
-
 import org.junit.rules.MethodRule;
-
-
 
 import com.carrotsearch.junitbenchmarks.BenchmarkOptions;
 import com.carrotsearch.junitbenchmarks.BenchmarkRule;
