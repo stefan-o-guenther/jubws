@@ -12,7 +12,7 @@ public class BenchmarkResult {
 	private List<BenchmarkMethod> methods;
 
 	
-	static class BenchmarkMethod {
+	public static class BenchmarkMethod {
 		
 		private String methodName;
 		private double roundAvg;
@@ -101,7 +101,23 @@ public class BenchmarkResult {
 			this.benchmarkTime = benchmarkTime;
 		}
 		
-		
+		public String toXML(){
+			StringBuilder sb = new StringBuilder();
+			
+			sb.append("<BenchmarkMethod");
+			sb.append(" methodName=\""+methodName+"\"");
+			sb.append(" roundAvg=\""+roundAvg+"\"");
+			sb.append(" roundStddev=\""+roundStddev+"\"");
+			sb.append(" gcInvocations=\""+gcInvocations+"\"");
+			sb.append(" gcTime=\""+gcTime+"\"");
+			sb.append(" benchmarkRounds=\""+benchmarkRounds+"\"");
+			sb.append(" warmupRounds=\""+warmupRounds+"\"");
+			sb.append(" warmupTime=\""+warmupTime+"\"");
+			sb.append(" benchmarkTime=\""+benchmarkTime+"\"");
+			sb.append("/>");
+			
+			return sb.toString();
+		}
 		
 	}
 
@@ -133,7 +149,21 @@ public class BenchmarkResult {
 		this.methods = methods;
 	}
 
-	
+	public String toXML(){
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("<BenchmarkResult classname=\""+className+"\" date=\""+date.getTime()+"\">");
+		sb.append("<Methods>");
+		for(BenchmarkMethod m : getMethods()){
+			sb.append(m.toXML());
+		}
+		sb.append("</Methods>");
+		sb.append("</BenchmarkResult>");
+
+		
+
+		return sb.toString();
+	}
 
 
 }

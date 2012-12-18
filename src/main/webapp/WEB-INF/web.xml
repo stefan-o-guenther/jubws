@@ -31,4 +31,18 @@
 		<url-pattern>/services/*</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>RSS</servlet-name>
+		<display-name>RSS</display-name>
+		<servlet-class>
+			de.htwaalen.jubws.server.RSSServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RSS</servlet-name>
+		<url-pattern>/rss</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

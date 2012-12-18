@@ -17,7 +17,7 @@ public class Client {
     public static void main(String args[]) throws Throwable {
         Service service = Service.create(new QName("http://server.jubws.htwaalen.de/", "JUnitBenchmarkWebService"));
 
-        String endpointAddress = "http://localhost:9000/junitservice";
+        String endpointAddress = "http://localhost:8080/jubws/services/junitservice";
 
         service.addPort(new QName("http://server.jubws.htwaalen.de/", "JUnitBenchmarkWebServicePort"),
         				SOAPBinding.SOAP11HTTP_BINDING, endpointAddress);
@@ -33,7 +33,7 @@ public class Client {
         
        BenchmarkResult results = junit.getResult(token);
        
-       System.out.println(results.getMethods().size());
+       System.out.println(results.toXML());
         
 
     }
