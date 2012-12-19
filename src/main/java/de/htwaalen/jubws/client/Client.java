@@ -26,8 +26,8 @@ public class Client {
         
 
         
-        int token = junit.enqueueBenchmark("file:///home/lucid/remote/stash/Dropbox/htw-aalen/Distributed Applications/Project/benchmarks/target/benchmarks-1.0.0.jar","de.htwaalen.benchmarks.DemoBenchmark");
-        int token2 = junit.enqueueBenchmark("file:///home/lucid/remote/stash/Dropbox/htw-aalen/Distributed Applications/Project/benchmarks/target/benchmarks-1.0.0.jar","de.htwaalen.benchmarks.DemoBenchmark");
+        int token = junit.enqueueBenchmark("file:///home/lucid/Dropbox/htw-aalen/Distributed Applications/Project/benchmarks/target/benchmarks-1.0.0.jar","de.htwaalen.benchmarks.DemoBenchmark");
+        int token2 = junit.enqueueBenchmark("file:///home/lucid/Dropbox/htw-aalen/Distributed Applications/Project/benchmarks/target/benchmarks-1.0.0.jar","de.htwaalen.benchmarks.DemoBenchmark");
         
         while(! (junit.isDone(token) || junit.isDone(token2)));
         

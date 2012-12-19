@@ -1,5 +1,6 @@
 package de.htwaalen.jubws;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
@@ -19,8 +20,9 @@ public class JUnitBenchmarkServiceImpl implements JUnitBenchmarkService{
 	private List<ProgressCallback> callbacks;
 
 	public JUnitBenchmarkServiceImpl() {
-		executor = Executors.newFixedThreadPool(1);
+		executor = Executors.newFixedThreadPool(2);
 		tasks = new HashMap<>();
+		callbacks = new ArrayList<>();
 	}
 
 
