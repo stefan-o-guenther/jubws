@@ -45,7 +45,7 @@ public class TestCases {
 	@Test
 	public void testGetResults() throws ExecutionException, InterruptedException, NoSuchElementException {
 		JUnitBenchmarkService junit = new JUnitBenchmarkServiceImpl();
-		int token = junit.enqueueBenchmark("file:///home/lucid/Dropbox/htw-aalen/Distributed Applications/Project/benchmarks/target/benchmarks-1.0.0.jar", "de.htwaalen.benchmarks.DemoBenchmark");
+		int token = junit.enqueueBenchmark("file:///home/lucid/remote/stash/Dropbox/htw-aalen/Distributed Applications/Project/jubws/benchmarks/target/benchmarks-1.0.0.jar", "de.htwaalen.benchmarks.DemoBenchmark");
 		while(!junit.isDone(token));
 		BenchmarkResult result = junit.getResult(token);
 		Assert.assertEquals(2, result.getMethods().size());
