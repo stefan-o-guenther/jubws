@@ -2,16 +2,12 @@ package de.htwaalen.jubws;
 
 
 import java.net.MalformedURLException;
-import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ExecutionException;
 
 import junit.framework.Assert;
 
 import org.junit.Test;
-
-import de.htwaalen.jubws.JUnitBenchmarkService;
-import de.htwaalen.jubws.JUnitBenchmarkServiceImpl;
 
 public class TestCases {
 

@@ -5,8 +5,15 @@ import java.util.concurrent.ExecutionException;
 
 
 public interface JUnitBenchmarkService {
+	
+	/**
+	 * Indicates that a benchmark is not done.
+	 */
 	public class BenchmarkNotDoneException extends RuntimeException{
 	}
+	/**
+	 * Indicates that a token is invalid.
+	 */
 	public class InvalidTokenException extends RuntimeException{
 	}
 	

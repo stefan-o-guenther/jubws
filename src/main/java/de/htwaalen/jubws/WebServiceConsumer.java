@@ -1,13 +1,14 @@
 package de.htwaalen.jubws;
 import java.io.IOException;
-import java.util.Calendar;
 
 import com.carrotsearch.junitbenchmarks.IResultsConsumer;
 import com.carrotsearch.junitbenchmarks.Result;
 
 import de.htwaalen.jubws.BenchmarkResult.BenchmarkMethod;
 
-
+/**
+ * JUnitBenchmarks consumer used to add the results to the corresponding BenchmarkTask.
+ */
 public class WebServiceConsumer implements IResultsConsumer{
 
 

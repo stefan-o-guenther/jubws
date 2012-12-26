@@ -4,12 +4,7 @@ import java.util.concurrent.ExecutionException;
 
 import javax.jws.WebService;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.context.ContextLoader;
-
-
 
 import de.htwaalen.jubws.BenchmarkResult;
 import de.htwaalen.jubws.JUnitBenchmarkService;

@@ -12,7 +12,9 @@ import com.sun.syndication.feed.synd.SyndEntryImpl;
 import com.sun.syndication.feed.synd.SyndFeed;
 import com.sun.syndication.feed.synd.SyndFeedImpl;
 
-
+/**
+ * This callback constructs a RSS feed from the benchmark events.
+ */
 public class RSSProgressCallback extends ProgressCallback{
 
 	private SyndFeed feed;

@@ -8,7 +8,10 @@ import org.junit.rules.MethodRule;
 import com.carrotsearch.junitbenchmarks.BenchmarkOptions;
 import com.carrotsearch.junitbenchmarks.BenchmarkRule;
 
-
+/**
+ * Demo benchmark used for testing.
+ * 
+ */
 public class DemoBenchmark {
 	
 	
