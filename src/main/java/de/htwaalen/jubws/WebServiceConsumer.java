@@ -24,6 +24,10 @@ public class WebServiceConsumer implements IResultsConsumer{
 		r.setWarmupTime(result.warmupTime);
 		r.setMethodName(result.getTestMethodName());
 
+		r.setConcurrency(result.getThreadCount());
+		r.setGcAverage(result.gcAverage.avg);
+		r.setGcStddev(result.gcAverage.stddev);
+		
 		r.setRoundAvg(result.roundAverage.avg);
 		r.setRoundStddev(result.roundAverage.stddev);
 		r.setGcTime(result.gcInfo.accumulatedTime());
