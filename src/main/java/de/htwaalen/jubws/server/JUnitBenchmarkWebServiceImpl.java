@@ -22,10 +22,9 @@ public class JUnitBenchmarkWebServiceImpl implements JUnitBenchmarkWebService {
 	public JUnitBenchmarkWebServiceImpl() {
 	}
 	
+	
 	@Override
 	public int enqueueBenchmark(String path, String classname) {
-		//benchmarkService = (JUnitBenchmarkService)ContextLoader.getCurrentWebApplicationContext().getBean("benchmarkService");
-		System.out.println(benchmarkService);
 		return benchmarkService.enqueueBenchmark(path, classname);
 	}
 
@@ -38,6 +37,14 @@ public class JUnitBenchmarkWebServiceImpl implements JUnitBenchmarkWebService {
 	public BenchmarkResult getResult(int token) throws ExecutionException,
 			BenchmarkNotDoneException, InvalidTokenException {
 		return benchmarkService.getResult(token);
+	}
+	
+	public void setBenchmarkService(JUnitBenchmarkService benchmarkService) {
+		this.benchmarkService = benchmarkService;
+	}
+	
+	public JUnitBenchmarkService getBenchmarkService() {
+		return benchmarkService;
 	}
 
 	

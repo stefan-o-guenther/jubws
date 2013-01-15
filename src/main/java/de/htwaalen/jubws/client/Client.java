@@ -17,7 +17,7 @@ public class Client {
     public static void main(String args[]) throws Throwable {
         Service service = Service.create(new QName("http://server.jubws.htwaalen.de/", "JUnitBenchmarkWebService"));
 
-        String endpointAddress = "http://localhost:8080/jubws/services/junitservice";
+        String endpointAddress = "http://localhost:9000/junitservice";
 
         service.addPort(new QName("http://server.jubws.htwaalen.de/", "JUnitBenchmarkWebServicePort"),
         				SOAPBinding.SOAP11HTTP_BINDING, endpointAddress);
@@ -26,10 +26,9 @@ public class Client {
         
 
         
-        int token = junit.enqueueBenchmark("file:///home/lucid/Dropbox/htw-aalen/Distributed Applications/Project/benchmarks/target/benchmarks-1.0.0.jar","de.htwaalen.benchmarks.DemoBenchmark");
-        int token2 = junit.enqueueBenchmark("file:///home/lucid/Dropbox/htw-aalen/Distributed Applications/Project/benchmarks/target/benchmarks-1.0.0.jar","de.htwaalen.benchmarks.DemoBenchmark");
-        
-        while(! (junit.isDone(token) || junit.isDone(token2)));
+        int token = junit.enqueueBenchmark("file:benchmarks/target/benchmarks-1.0.0.jar","de.htwaalen.benchmarks.FileAccessBenchmark");
+
+        while(!junit.isDone(token));
         
        BenchmarkResult results = junit.getResult(token);
        
