@@ -32,6 +32,7 @@ public class JUnitBenchmarkServiceImpl implements JUnitBenchmarkService{
 		
 
 		int token = ("path" + "classname" + Calendar.getInstance()).hashCode();
+		System.out.println("Generated token: "+token);
 
 		BenchmarkTask task = new BenchmarkTask(path, classname, callbacks);
 		Future<BenchmarkResult> future = executor.submit(task);
@@ -43,6 +44,7 @@ public class JUnitBenchmarkServiceImpl implements JUnitBenchmarkService{
 
 	@Override
 	public BenchmarkResult getResult(int token) throws ExecutionException, BenchmarkNotDoneException, InvalidTokenException {
+		System.out.println("getResult requested token: "+token);
 		Future<BenchmarkResult> future = tasks.get(token);
 		if (future == null) {
 			throw new InvalidTokenException();
@@ -64,12 +66,14 @@ public class JUnitBenchmarkServiceImpl implements JUnitBenchmarkService{
 
 	@Override
 	public boolean isDone(int token) throws InvalidTokenException {
-		//System.out.println("called isDone("+token+")");
+		System.out.println("isDone requested token: "+token);
 		Future<BenchmarkResult> future = tasks.get(token);
 		if (future == null) {
 			throw new InvalidTokenException();
 		} else {
-			return future.isDone();
+			boolean result = future.isDone();
+			System.out.println("isDone for token "+token+" is "+result);
+			return result;
 		}
 	}
 	
