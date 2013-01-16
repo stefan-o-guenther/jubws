@@ -14,3 +14,4 @@ doc/generated
 *.vrb
 *.pdf
 .directory
+JUBWS_BP/build
