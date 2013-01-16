@@ -1,7 +1,8 @@
-﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:this="http://thisdiagram/Interface" xmlns:getResult="http://thisdiagram/getResult" xmlns:tns="http://www.example.org/enqueueBenchmarkParams" xmlns:isDone="http://thisdiagram/isDone" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:enqueueBenchmark="http://thisdiagram/enqueueBenchmark" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Interface">
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:this="http://thisdiagram/Interface" xmlns:getResult="http://thisdiagram/getResult" xmlns:runBenchmark="http://thisdiagram/runBenchmark" xmlns:tns="http://www.example.org/enqueueBenchmarkParams" xmlns:isDone="http://thisdiagram/isDone" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:enqueueBenchmark="http://thisdiagram/enqueueBenchmark" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Interface">
     <bpdm:dependencies version="6000089">
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Interface" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/getResult" bpdm:prefix="getResult" bpdm:comment="contrib=&apos;partner-pool:///_Uene8F91EeKBz_qQkNoSGg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/runBenchmark" bpdm:prefix="runBenchmark" bpdm:comment="contrib=&apos;partner-pool:///_ymDkQF_QEeKfzI0Yfa3UWA"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.example.org/enqueueBenchmarkParams" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///schemas/enqueueBenchmarkParams.xsd"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/isDone" bpdm:prefix="isDone" bpdm:comment="contrib=&apos;partner-pool:///_jsAroF90EeKBz_qQkNoSGg"></bpdm:namespaceDefinition>
         <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
@@ -14,12 +15,14 @@
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_aQjaoF9wEeKoI5D8SPNkHg" bpdm:label="enqueueBenchmark"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_jsAroF90EeKBz_qQkNoSGg" bpdm:label="isDone"/>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_Uene8F91EeKBz_qQkNoSGg" bpdm:label="getResult"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_ymDkQF_QEeKfzI0Yfa3UWA" bpdm:label="runBenchmark"/>
     </bpdm:dependencies>
     <bpel:scope bpdm:label="Interface" bpdm:ID="_XNkx0F9wEeKoI5D8SPNkHg">
         <bpel:partnerLinks>
             <bpel:partnerLink name="enqueueBenchmarkAndInterfacePlkVar" partnerLinkType="diag:enqueueBenchmarkAndInterface" initializePartnerRole="yes" partnerRole="enqueueBenchmark_for_Interface" bpdm:invokedService="enqueueBenchmark:CanonicServiceForInterface" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/enqueueBenchmark/Interface" bpdm:invokedIsDefault="true" bpdm:clientTasks="_XNkx0F9wEeKoI5D8SPNkHg:_XNlY4F9wEeKoI5D8SPNkHg" bpdm:isManaged="true" bpdm:otherPoolId="_aQjaoF9wEeKoI5D8SPNkHg"/>
             <bpel:partnerLink name="isDoneAndInterfacePlkVar" partnerLinkType="diag:isDoneAndInterface" initializePartnerRole="yes" partnerRole="isDone_for_Interface" bpdm:invokedService="isDone:CanonicServiceForInterface" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/isDone/Interface" bpdm:invokedIsDefault="true" bpdm:clientTasks="_XNkx0F9wEeKoI5D8SPNkHg:_s4K5MF90EeKBz_qQkNoSGg" bpdm:isManaged="true" bpdm:otherPoolId="_jsAroF90EeKBz_qQkNoSGg"/>
             <bpel:partnerLink name="interfaceAndGetResultPlkVar" partnerLinkType="diag:InterfaceAndGetResult" initializePartnerRole="yes" partnerRole="getResult_for_Interface" bpdm:invokedService="getResult:CanonicServiceForInterface" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/getResult/Interface" bpdm:invokedIsDefault="true" bpdm:clientTasks="_XNkx0F9wEeKoI5D8SPNkHg:_ifpwwF91EeKBz_qQkNoSGg" bpdm:isManaged="true" bpdm:otherPoolId="_Uene8F91EeKBz_qQkNoSGg"/>
+            <bpel:partnerLink name="runBenchmarkAndInterfacePlkVar" partnerLinkType="diag:runBenchmarkAndInterface" initializePartnerRole="yes" partnerRole="runBenchmark_for_Interface" bpdm:invokedService="runBenchmark:CanonicServiceForInterface" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/runBenchmark/Interface" bpdm:invokedIsDefault="true" bpdm:clientTasks="_XNkx0F9wEeKoI5D8SPNkHg:_3qQd8F_QEeKfzI0Yfa3UWA" bpdm:isManaged="true" bpdm:otherPoolId="_ymDkQF_QEeKfzI0Yfa3UWA"/>
         </bpel:partnerLinks>
         <bpel:variables>
             <bpel:variable name="enqueueBenchmarkEventStartMessageRequest" messageType="enqueueBenchmark:EventStartMessageRequest" bpdm:id="_8TSqwF9xEeKoI5D8SPNkHg" bpdm:messageIds=" out:_8TQ1kF9xEeKoI5D8SPNkHg">
@@ -40,24 +43,36 @@
                 </bpel:from>
             </bpel:variable>
             <bpel:variable name="getResultEventStartMessageResponse" messageType="getResult:EventStartMessageResponse" bpdm:id="_n96JNV91EeKBz_qQkNoSGg" bpdm:messageIds="inc:_n9q4oF91EeKBz_qQkNoSGg"/>
+            <bpel:variable name="runBenchmarkEventStartMessageRequest" messageType="runBenchmark:EventStartMessageRequest" bpdm:id="_sIU2YF_REeKfzI0Yfa3UWA" bpdm:messageIds=" out:_sISaIF_REeKfzI0Yfa3UWA">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="runBenchmark:EventStartMessageRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="runBenchmarkEventStartMessageResponse" messageType="runBenchmark:EventStartMessageResponse" bpdm:id="_tVJO0F_REeKfzI0Yfa3UWA" bpdm:messageIds="inc:_tUvmMF_REeKfzI0Yfa3UWA"/>
         </bpel:variables>
         <bpel:flow>
             <bpel:sequence>
-                <bpdm:messagingtask operation="EventStartMessage" partnerLink="enqueueBenchmarkAndInterfacePlkVar" portType="enqueueBenchmark:ForInterface" isMyRole="false" enableSharing="false" bpdm:label="Console Interface" bpdm:ID="_XNlY4F9wEeKoI5D8SPNkHg">
-                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="enqueueBenchmarkEventStartMessageRequest" bpdm:variableIsManaged="true" bpdm:messageType="enqueueBenchmark:EventStartMessageRequest" bpdm:ID="_8TQ1kF9xEeKoI5D8SPNkHg"></bpdm:linkset>
-                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="enqueueBenchmarkEventStartMessageResponse" bpdm:variableIsManaged="true" bpdm:messageType="enqueueBenchmark:EventStartMessageResponse" bpdm:ID="_8zdYkF9xEeKoI5D8SPNkHg"></bpdm:linkset>
+                <bpdm:messagingtask operation="EventStartMessage" partnerLink="interfaceAndGetResultPlkVar" portType="getResult:ForInterface" isMyRole="false" enableSharing="false" bpdm:label="Console Interface3" bpdm:ID="_ifpwwF91EeKBz_qQkNoSGg">
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="getResultEventStartMessageRequest" bpdm:variableIsManaged="true" bpdm:messageType="getResult:EventStartMessageRequest" bpdm:ID="_m1M0sF91EeKBz_qQkNoSGg"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="getResultEventStartMessageResponse" bpdm:variableIsManaged="true" bpdm:messageType="getResult:EventStartMessageResponse" bpdm:ID="_n9q4oF91EeKBz_qQkNoSGg"></bpdm:linkset>
                 </bpdm:messagingtask>
             </bpel:sequence>
             <bpel:sequence>
-                <bpdm:messagingtask operation="EventStartMessage" partnerLink="interfaceAndGetResultPlkVar" portType="getResult:ForInterface" isMyRole="false" enableSharing="false" bpdm:label="Console Interface3" bpdm:ID="_ifpwwF91EeKBz_qQkNoSGg">
-                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="getResultEventStartMessageRequest" bpdm:variableIsManaged="true" bpdm:messageType="getResult:EventStartMessageRequest" bpdm:ID="_m1M0sF91EeKBz_qQkNoSGg"></bpdm:linkset>
-                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="getResultEventStartMessageResponse" bpdm:msgVarScopeId="_XNkx0F9wEeKoI5D8SPNkHg" bpdm:variableIsManaged="true" bpdm:messageType="getResult:EventStartMessageResponse" bpdm:ID="_n9q4oF91EeKBz_qQkNoSGg"></bpdm:linkset>
+                <bpdm:messagingtask operation="EventStartMessage" partnerLink="runBenchmarkAndInterfacePlkVar" portType="runBenchmark:ForInterface" isMyRole="false" enableSharing="false" bpdm:label="Console4 Interface" bpdm:ID="_3qQd8F_QEeKfzI0Yfa3UWA">
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="runBenchmarkEventStartMessageRequest" bpdm:variableIsManaged="true" bpdm:messageType="runBenchmark:EventStartMessageRequest" bpdm:ID="_sISaIF_REeKfzI0Yfa3UWA"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="runBenchmarkEventStartMessageResponse" bpdm:variableIsManaged="true" bpdm:messageType="runBenchmark:EventStartMessageResponse" bpdm:ID="_tUvmMF_REeKfzI0Yfa3UWA"></bpdm:linkset>
                 </bpdm:messagingtask>
             </bpel:sequence>
             <bpel:sequence>
                 <bpdm:messagingtask operation="EventStartMessage" partnerLink="isDoneAndInterfacePlkVar" portType="isDone:ForInterface" isMyRole="false" enableSharing="false" bpdm:label="Console Interface2" bpdm:ID="_s4K5MF90EeKBz_qQkNoSGg">
                     <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="isDoneEventStartMessageRequest" bpdm:variableIsManaged="true" bpdm:messageType="isDone:EventStartMessageRequest" bpdm:ID="_vpYckF90EeKBz_qQkNoSGg"></bpdm:linkset>
                     <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="isDoneEventStartMessageResponse" bpdm:variableIsManaged="true" bpdm:messageType="isDone:EventStartMessageResponse" bpdm:ID="_wTQgAF90EeKBz_qQkNoSGg"></bpdm:linkset>
+                </bpdm:messagingtask>
+            </bpel:sequence>
+            <bpel:sequence>
+                <bpdm:messagingtask operation="EventStartMessage" partnerLink="enqueueBenchmarkAndInterfacePlkVar" portType="enqueueBenchmark:ForInterface" isMyRole="false" enableSharing="false" bpdm:label="Console Interface" bpdm:ID="_XNlY4F9wEeKoI5D8SPNkHg">
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="enqueueBenchmarkEventStartMessageRequest" bpdm:variableIsManaged="true" bpdm:messageType="enqueueBenchmark:EventStartMessageRequest" bpdm:ID="_8TQ1kF9xEeKoI5D8SPNkHg"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="enqueueBenchmarkEventStartMessageResponse" bpdm:variableIsManaged="true" bpdm:messageType="enqueueBenchmark:EventStartMessageResponse" bpdm:ID="_8zdYkF9xEeKoI5D8SPNkHg"></bpdm:linkset>
                 </bpdm:messagingtask>
             </bpel:sequence>
         </bpel:flow>
