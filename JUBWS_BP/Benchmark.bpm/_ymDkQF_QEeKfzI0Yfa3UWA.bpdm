@@ -26,34 +26,34 @@
             <bpel:binding name="CanonicBindingForInterface" type="this:ForInterface" bpdm:isSynchronized="true"/>
         </bpdm:namespaceContributor>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_XNkx0F9wEeKoI5D8SPNkHg" bpdm:label="Interface"/>
-        <bpdm:namespaceContributor bpdm:url="partner-pool:///_c-njYF9wEeKoI5D8SPNkHg" bpdm:label="External Services"/>
         <bpdm:namespaceContributor bpdm:url="project:///services/junitservice.wsdl"/>
         <bpdm:namespaceContributor bpdm:url="project:///schemas/enqueueBenchmarkParams.xsd"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_c-njYF9wEeKoI5D8SPNkHg" bpdm:label="External Services"/>
     </bpdm:dependencies>
     <bpel:scope bpdm:label="runBenchmark" bpdm:ID="_ymDkQF_QEeKfzI0Yfa3UWA">
         <bpel:partnerLinks>
-            <bpel:partnerLink name="runBenchmarkAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlkVar" partnerLinkType="diag:runBenchmarkAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlk" initializePartnerRole="yes" partnerRole="External_Services_for_runBenchmark" bpdm:invokedService="tns:JUnitBenchmarkWebServiceImplService" bpdm:invokedPort="JUnitBenchmarkWebServiceImplPort" bpdm:invokedSOAPAddress="http://localhost:9000/junitservice" bpdm:invokedIsDefault="true" bpdm:clientTasks="_itgoIF_ZEeKk_r6B8Og9pQ:_itlgoF_ZEeKk_r6B8Og9pQ, _ymDkQF_QEeKfzI0Yfa3UWA:_Ew2gwF_REeKfzI0Yfa3UWA, _ymDkQF_QEeKfzI0Yfa3UWA:_OsTdQF_REeKfzI0Yfa3UWA" bpdm:isManaged="true" bpdm:otherPoolId="_c-njYF9wEeKoI5D8SPNkHg"/>
             <bpel:partnerLink name="runBenchmarkAndInterfacePlkVar" partnerLinkType="diag:runBenchmarkAndInterface" myRole="runBenchmark_for_Interface" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForInterface" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/runBenchmark/Interface" bpdm:providedIsDefault="true" bpdm:clientTasks="_ymDkQF_QEeKfzI0Yfa3UWA:_jmyTIF_REeKfzI0Yfa3UWA, _ymDkQF_QEeKfzI0Yfa3UWA:_mtJAEF_REeKfzI0Yfa3UWA" bpdm:isManaged="true" bpdm:otherPoolId="_XNkx0F9wEeKoI5D8SPNkHg"/>
+            <bpel:partnerLink name="runBenchmarkAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlkVar" partnerLinkType="diag:runBenchmarkAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlk" initializePartnerRole="yes" partnerRole="External_Services_for_runBenchmark" bpdm:invokedService="tns:JUnitBenchmarkWebServiceImplService" bpdm:invokedPort="JUnitBenchmarkWebServiceImplPort" bpdm:invokedSOAPAddress="http://localhost:9000/junitservice" bpdm:invokedIsDefault="true" bpdm:clientTasks="_itgoIF_ZEeKk_r6B8Og9pQ:_itlgoF_ZEeKk_r6B8Og9pQ, _ymDkQF_QEeKfzI0Yfa3UWA:_OsTdQF_REeKfzI0Yfa3UWA, _ymDkQF_QEeKfzI0Yfa3UWA:_Ew2gwF_REeKfzI0Yfa3UWA" bpdm:isManaged="true" bpdm:otherPoolId="_c-njYF9wEeKoI5D8SPNkHg"/>
         </bpel:partnerLinks>
         <bpel:variables>
-            <bpel:variable name="tnsEnqueueBenchmarkMsg" messageType="tns:enqueueBenchmark" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="enqueueBenchmark" opMsgType="0" bpdm:id="_dag-IF_REeKfzI0Yfa3UWA" bpdm:messageIds=" out:_daNcIF_REeKfzI0Yfa3UWA">
-                <bpel:from bpdm:toPart="parameters">
-                    <bpel:literal bpdm:linkedMessageType="tns:enqueueBenchmark" bpdm:linkedPart="parameters" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:opMsgType="0" bpdm:operation="enqueueBenchmark"></bpel:literal>
-                </bpel:from>
-            </bpel:variable>
-            <bpel:variable name="tnsEnqueueBenchmarkResponseMsg" messageType="tns:enqueueBenchmarkResponse" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="enqueueBenchmark" opMsgType="1" bpdm:id="_epqR0F_REeKfzI0Yfa3UWA" bpdm:messageIds="inc:_epLwsF_REeKfzI0Yfa3UWA"/>
-            <bpel:variable name="tnsGetResultMsg" messageType="tns:getResult" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="getResult" opMsgType="0" bpdm:id="_hcLcwF_REeKfzI0Yfa3UWA" bpdm:messageIds=" out:_hb2soF_REeKfzI0Yfa3UWA">
-                <bpel:from bpdm:toPart="parameters">
-                    <bpel:literal bpdm:linkedMessageType="tns:getResult" bpdm:linkedPart="parameters" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:opMsgType="0" bpdm:operation="getResult"></bpel:literal>
-                </bpel:from>
-            </bpel:variable>
-            <bpel:variable name="tnsGetResultResponseMsg" messageType="tns:getResultResponse" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="getResult" opMsgType="1" bpdm:id="_h1LypV_REeKfzI0Yfa3UWA" bpdm:messageIds="inc:_h0nx8F_REeKfzI0Yfa3UWA"/>
             <bpel:variable name="thisEventStartMessageRequest" messageType="this:EventStartMessageRequest" bpdm:id="_sIenYF_REeKfzI0Yfa3UWA" bpdm:messageIds="inc:_sISaIF_REeKfzI0Yfa3UWA"/>
             <bpel:variable name="thisEventStartMessageResponse" messageType="this:EventStartMessageResponse" bpdm:id="_tU3iAF_REeKfzI0Yfa3UWA" bpdm:messageIds=" out:_tUvmMF_REeKfzI0Yfa3UWA">
                 <bpel:from bpdm:toPart="body">
                     <bpel:literal bpdm:linkedMessageType="this:EventStartMessageResponse" bpdm:linkedPart="body"></bpel:literal>
                 </bpel:from>
             </bpel:variable>
+            <bpel:variable name="tnsEnqueueBenchmarkMsg" messageType="tns:enqueueBenchmark" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="enqueueBenchmark" opMsgType="0" bpdm:id="_3khGsF_uEeKiAPvFebb2qw" bpdm:messageIds=" out:_3kXVsF_uEeKiAPvFebb2qw">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="tns:enqueueBenchmark" bpdm:linkedPart="parameters" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:opMsgType="0" bpdm:operation="enqueueBenchmark"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="tnsEnqueueBenchmarkResponseMsg" messageType="tns:enqueueBenchmarkResponse" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="enqueueBenchmark" opMsgType="1" bpdm:id="_33ZmcF_uEeKiAPvFebb2qw" bpdm:messageIds="inc:_33CaEF_uEeKiAPvFebb2qw"/>
+            <bpel:variable name="tnsGetResultAsXMLMsg" messageType="tns:getResultAsXML" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="getResultAsXML" opMsgType="0" bpdm:id="_5bAHMF_uEeKiAPvFebb2qw" bpdm:messageIds=" out:_5avBcF_uEeKiAPvFebb2qw">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="tns:getResultAsXML" bpdm:linkedPart="parameters" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:opMsgType="0" bpdm:operation="getResultAsXML"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="tnsGetResultAsXMLResponseMsg" messageType="tns:getResultAsXMLResponse" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="getResultAsXML" opMsgType="1" bpdm:id="_5xy2kF_uEeKiAPvFebb2qw" bpdm:messageIds="inc:_5xFE4F_uEeKiAPvFebb2qw"/>
         </bpel:variables>
         <bpel:sequence>
             <bpdm:messagingtask eventType="start: message" operation="EventStartMessage" partnerLink="runBenchmarkAndInterfacePlkVar" portType="this:ForInterface" isMyRole="true" enableSharing="false" bpdm:label="Message_Start_Event" bpdm:ID="_mtJAEF_REeKfzI0Yfa3UWA">
@@ -70,62 +70,48 @@
                         <bpel:to>$tnsEnqueueBenchmarkMsg.parameters/arg1/text()</bpel:to><mapper:mapperLink><mapper:vertice id="35795209" targetPath="$tnsEnqueueBenchmarkMsg.parameters/arg1/text()" targetedBy="1658791290-arg0"></mapper:vertice><mapper:vertice id="1658791290" sourcePath="$thisEventStartMessageRequest.body/enqueueBenchmarkParams:classname/text()"></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
-                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="tnsEnqueueBenchmarkMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:enqueueBenchmark" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_daNcIF_REeKfzI0Yfa3UWA"></bpdm:linkset>
-                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="tnsEnqueueBenchmarkResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:enqueueBenchmarkResponse" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_epLwsF_REeKfzI0Yfa3UWA"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="tnsEnqueueBenchmarkMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:enqueueBenchmark" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_3kXVsF_uEeKiAPvFebb2qw"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="tnsEnqueueBenchmarkResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:enqueueBenchmarkResponse" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_33CaEF_uEeKiAPvFebb2qw"></bpdm:linkset>
             </bpdm:messagingtask>
             <bpel:scope bpdm:label="SubProcess" bpdm:ID="_itgoIF_ZEeKk_r6B8Og9pQ">
                 <bpdm:linkset bpdm:type="loop" bpdm:loopType="repeatUntil">
-                    <bpel:condition bpdm:loopType="repeatUntil">$tnsIsDoneResponseMsg.parameters = true()
-<mapper:mapperLink>
-  <mapper:vertice id="1070124075" targetPath="$repeat until" targetedBy="1766259414-arg1"></mapper:vertice>
-  <mapper:vertice id="1766259414" dimension="78x24" location="240,72">
-    <mapper:value>=</mapper:value>
-  </mapper:vertice>
-  <mapper:vertice id="1855966484" sourcePath="$tnsIsDoneResponseMsg.parameters" targetedBy="1766259414-arg0"></mapper:vertice>
-  <mapper:vertice id="270589341" dimension="78x24" location="96,96" targetedBy="1766259414-arg2">
-    <mapper:value>true()</mapper:value>
-  </mapper:vertice>
-</mapper:mapperLink></bpel:condition>
+                    <bpel:condition bpdm:loopType="repeatUntil">$tnsIsDoneResponseMsg.parameters = true()<mapper:mapperLink><mapper:vertice id="1070124075" targetPath="$repeat until" targetedBy="1766259414-arg1"></mapper:vertice><mapper:vertice id="1766259414" dimension="78x24" location="240,72"><mapper:value>=</mapper:value></mapper:vertice><mapper:vertice id="1855966484" sourcePath="$tnsIsDoneResponseMsg.parameters" targetedBy="1766259414-arg0"></mapper:vertice><mapper:vertice id="270589341" dimension="78x24" location="96,96" targetedBy="1766259414-arg2"><mapper:value>true()</mapper:value></mapper:vertice></mapper:mapperLink></bpel:condition>
                 </bpdm:linkset>
                 <bpel:variables>
-                    <bpel:variable name="tnsIsDoneMsg" messageType="tns:isDone" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="0" bpdm:id="_Iqy3sF_aEeKk_r6B8Og9pQ" bpdm:messageIds=" out:_IqhK4F_aEeKk_r6B8Og9pQ">
+                    <bpel:variable name="tnsIsDoneMsg" messageType="tns:isDone" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="0" bpdm:id="_4f_QcF_uEeKiAPvFebb2qw" bpdm:messageIds=" out:_4fxOAF_uEeKiAPvFebb2qw">
                         <bpel:from bpdm:toPart="parameters">
                             <bpel:literal bpdm:linkedMessageType="tns:isDone" bpdm:linkedPart="parameters" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:opMsgType="0" bpdm:operation="isDone"></bpel:literal>
                         </bpel:from>
                     </bpel:variable>
-                    <bpel:variable name="tnsIsDoneResponseMsg" messageType="tns:isDoneResponse" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="1" bpdm:id="_JSM18F_aEeKk_r6B8Og9pQ" bpdm:messageIds="inc:_JRr4kF_aEeKk_r6B8Og9pQ"/>
+                    <bpel:variable name="tnsIsDoneResponseMsg" messageType="tns:isDoneResponse" binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="1" bpdm:id="_470Q0F_uEeKiAPvFebb2qw" bpdm:messageIds="inc:_47YzAF_uEeKiAPvFebb2qw"/>
                 </bpel:variables>
                 <bpel:sequence>
                     <bpdm:messagingtask operation="isDone" partnerLink="runBenchmarkAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlkVar" portType="tns:JUnitBenchmarkWebService" isMyRole="false" enableSharing="false" bpdm:label="isDone" bpdm:ID="_itlgoF_ZEeKk_r6B8Og9pQ">
                         <bpdm:linkset bpdm:type="assignments">
                             <bpel:copy>
                                 <bpel:from>$tnsEnqueueBenchmarkResponseMsg.parameters/return/text()</bpel:from>
-                                <bpel:to>$tnsIsDoneMsg.parameters/arg0/text()</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="1772947393" targetPath="$tnsIsDoneMsg.parameters/arg0/text()" targetedBy="2073610020-arg0"></mapper:vertice>
-  <mapper:vertice id="2073610020" sourcePath="$tnsEnqueueBenchmarkResponseMsg.parameters/return/text()"></mapper:vertice>
-</mapper:mapperLink>
+                                <bpel:to>$tnsIsDoneMsg.parameters/arg0/text()</bpel:to><mapper:mapperLink><mapper:vertice id="1772947393" targetPath="$tnsIsDoneMsg.parameters/arg0/text()" targetedBy="2073610020-arg0"></mapper:vertice><mapper:vertice id="2073610020" sourcePath="$tnsEnqueueBenchmarkResponseMsg.parameters/return/text()"></mapper:vertice></mapper:mapperLink>
                             </bpel:copy>
                         </bpdm:linkset>
-                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="tnsIsDoneMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:isDone" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_IqhK4F_aEeKk_r6B8Og9pQ"></bpdm:linkset>
-                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="tnsIsDoneResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:isDoneResponse" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_JRr4kF_aEeKk_r6B8Og9pQ"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="tnsIsDoneMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:isDone" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_4fxOAF_uEeKiAPvFebb2qw"></bpdm:linkset>
+                        <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="tnsIsDoneResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:isDoneResponse" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_47YzAF_uEeKiAPvFebb2qw"></bpdm:linkset>
                         <bpdm:thrownFault msgFaultNcName="InvalidTokenException" msgFaultTypeQname="tns:InvalidTokenException"/>
                     </bpdm:messagingtask>
                 </bpel:sequence>
             </bpel:scope>
-            <bpdm:messagingtask operation="getResult" partnerLink="runBenchmarkAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlkVar" portType="tns:JUnitBenchmarkWebService" isMyRole="false" enableSharing="false" bpdm:label="getResult" bpdm:ID="_OsTdQF_REeKfzI0Yfa3UWA">
+            <bpdm:messagingtask operation="getResultAsXML" partnerLink="runBenchmarkAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlkVar" portType="tns:JUnitBenchmarkWebService" isMyRole="false" enableSharing="false" bpdm:label="getResult" bpdm:ID="_OsTdQF_REeKfzI0Yfa3UWA">
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>$tnsEnqueueBenchmarkResponseMsg.parameters/return/text()</bpel:from>
-                        <bpel:to>$tnsGetResultMsg.parameters/arg0/text()</bpel:to>
+                        <bpel:to>$tnsGetResultAsXMLMsg.parameters/arg0/text()</bpel:to>
 <mapper:mapperLink>
-  <mapper:vertice id="232340572" targetPath="$tnsGetResultMsg.parameters/arg0/text()" targetedBy="1151480048-arg0"></mapper:vertice>
-  <mapper:vertice id="1151480048" sourcePath="$tnsEnqueueBenchmarkResponseMsg.parameters/return/text()"></mapper:vertice>
+  <mapper:vertice id="405881468" targetPath="$tnsGetResultAsXMLMsg.parameters/arg0/text()" targetedBy="1056149272-arg0"></mapper:vertice>
+  <mapper:vertice id="1056149272" sourcePath="$tnsEnqueueBenchmarkResponseMsg.parameters/return/text()"></mapper:vertice>
 </mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
-                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="tnsGetResultMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getResult" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_hb2soF_REeKfzI0Yfa3UWA"></bpdm:linkset>
-                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="tnsGetResultResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getResultResponse" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_h0nx8F_REeKfzI0Yfa3UWA"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="tnsGetResultAsXMLMsg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getResultAsXML" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_5avBcF_uEeKiAPvFebb2qw"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="tnsGetResultAsXMLResponseMsg" bpdm:msgVarScopeId="_ymDkQF_QEeKfzI0Yfa3UWA" bpdm:variableIsManaged="true" bpdm:messageType="tns:getResultAsXMLResponse" bpdm:binding="tns:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_5xFE4F_uEeKiAPvFebb2qw"></bpdm:linkset>
                 <bpdm:thrownFault msgFaultNcName="InvalidTokenException" msgFaultTypeQname="tns:InvalidTokenException"/>
                 <bpdm:thrownFault msgFaultNcName="ExecutionException" msgFaultTypeQname="tns:ExecutionException"/>
                 <bpdm:thrownFault msgFaultNcName="BenchmarkNotDoneException" msgFaultTypeQname="tns:BenchmarkNotDoneException"/>
@@ -133,8 +119,12 @@
             <bpdm:messagingtask eventType="end: message" operation="EventStartMessage" partnerLink="runBenchmarkAndInterfacePlkVar" portType="this:ForInterface" isMyRole="true" enableSharing="false" bpdm:label="Message_End_Event" bpdm:ID="_jmyTIF_REeKfzI0Yfa3UWA">
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
-                        <bpel:from>$tnsGetResultResponseMsg.parameters/return/className/text()</bpel:from>
-                        <bpel:to>$thisEventStartMessageResponse.body/text()</bpel:to><mapper:mapperLink><mapper:vertice id="821164948" targetPath="$thisEventStartMessageResponse.body/text()" targetedBy="598003751-arg0"></mapper:vertice><mapper:vertice id="598003751" sourcePath="$tnsGetResultResponseMsg.parameters/return/className/text()"></mapper:vertice></mapper:mapperLink>
+                        <bpel:from>$tnsGetResultAsXMLResponseMsg.parameters/return/text()</bpel:from>
+                        <bpel:to>$thisEventStartMessageResponse.body/text()</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="1197554988" targetPath="$thisEventStartMessageResponse.body/text()" targetedBy="823152093-arg0"></mapper:vertice>
+  <mapper:vertice id="823152093" sourcePath="$tnsGetResultAsXMLResponseMsg.parameters/return/text()"></mapper:vertice>
+</mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisEventStartMessageResponse" bpdm:variableIsManaged="true" bpdm:messageType="this:EventStartMessageResponse" bpdm:ID="_tUvmMF_REeKfzI0Yfa3UWA"></bpdm:linkset>

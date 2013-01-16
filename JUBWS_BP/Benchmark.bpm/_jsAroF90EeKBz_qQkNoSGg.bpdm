@@ -25,8 +25,8 @@
             <bpel:binding name="CanonicBindingForInterface" type="this:ForInterface" bpdm:isSynchronized="true"/>
         </bpdm:namespaceContributor>
         <bpdm:namespaceContributor bpdm:url="partner-pool:///_XNkx0F9wEeKoI5D8SPNkHg" bpdm:label="Interface"/>
-        <bpdm:namespaceContributor bpdm:url="partner-pool:///_c-njYF9wEeKoI5D8SPNkHg" bpdm:label="External Services"/>
         <bpdm:namespaceContributor bpdm:url="project:///services/junitservice.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_c-njYF9wEeKoI5D8SPNkHg" bpdm:label="External Services"/>
     </bpdm:dependencies>
     <bpel:scope bpdm:label="isDone" bpdm:ID="_jsAroF90EeKBz_qQkNoSGg">
         <bpel:partnerLinks>
@@ -40,12 +40,12 @@
                     <bpel:literal bpdm:linkedMessageType="this:EventStartMessageResponse" bpdm:linkedPart="body"></bpel:literal>
                 </bpel:from>
             </bpel:variable>
-            <bpel:variable name="junitserviceIsDoneMsg" messageType="junitservice:isDone" binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="0" bpdm:id="_zw6SoF90EeKBz_qQkNoSGg" bpdm:messageIds=" out:_zws3QF90EeKBz_qQkNoSGg">
+            <bpel:variable name="junitserviceIsDoneMsg" messageType="junitservice:isDone" binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="0" bpdm:id="_ptRDAF_uEeKiAPvFebb2qw" bpdm:messageIds=" out:_ptFc0F_uEeKiAPvFebb2qw">
                 <bpel:from bpdm:toPart="parameters">
                     <bpel:literal bpdm:linkedMessageType="junitservice:isDone" bpdm:linkedPart="parameters" bpdm:binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:opMsgType="0" bpdm:operation="isDone"></bpel:literal>
                 </bpel:from>
             </bpel:variable>
-            <bpel:variable name="junitserviceIsDoneResponseMsg" messageType="junitservice:isDoneResponse" binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="1" bpdm:id="_0HV1pV90EeKBz_qQkNoSGg" bpdm:messageIds="inc:_0GzDEF90EeKBz_qQkNoSGg"/>
+            <bpel:variable name="junitserviceIsDoneResponseMsg" messageType="junitservice:isDoneResponse" binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="1" bpdm:id="_qNtdoF_uEeKiAPvFebb2qw" bpdm:messageIds="inc:_qNBhIF_uEeKiAPvFebb2qw"/>
         </bpel:variables>
         <bpel:sequence>
             <bpdm:messagingtask eventType="start: message" operation="EventStartMessage" partnerLink="isDoneAndInterfacePlkVar" portType="this:ForInterface" isMyRole="true" enableSharing="false" bpdm:label="Message_Start_Event" bpdm:ID="_mndwIF90EeKBz_qQkNoSGg">
@@ -55,26 +55,18 @@
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>$thisEventStartMessageRequest.body/text()</bpel:from>
-                        <bpel:to>$junitserviceIsDoneMsg.parameters/arg0/text()</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="221341226" targetPath="$junitserviceIsDoneMsg.parameters/arg0/text()" targetedBy="905181794-arg0"></mapper:vertice>
-  <mapper:vertice id="905181794" sourcePath="$thisEventStartMessageRequest.body/text()"></mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$junitserviceIsDoneMsg.parameters/arg0/text()</bpel:to><mapper:mapperLink><mapper:vertice id="221341226" targetPath="$junitserviceIsDoneMsg.parameters/arg0/text()" targetedBy="905181794-arg0"></mapper:vertice><mapper:vertice id="905181794" sourcePath="$thisEventStartMessageRequest.body/text()"></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
-                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="junitserviceIsDoneMsg" bpdm:variableIsManaged="true" bpdm:messageType="junitservice:isDone" bpdm:binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_zws3QF90EeKBz_qQkNoSGg"></bpdm:linkset>
-                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="junitserviceIsDoneResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="junitservice:isDoneResponse" bpdm:binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_0GzDEF90EeKBz_qQkNoSGg"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="junitserviceIsDoneMsg" bpdm:variableIsManaged="true" bpdm:messageType="junitservice:isDone" bpdm:binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_ptFc0F_uEeKiAPvFebb2qw"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="junitserviceIsDoneResponseMsg" bpdm:msgVarScopeId="_jsAroF90EeKBz_qQkNoSGg" bpdm:variableIsManaged="true" bpdm:messageType="junitservice:isDoneResponse" bpdm:binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_qNBhIF_uEeKiAPvFebb2qw"></bpdm:linkset>
                 <bpdm:thrownFault msgFaultNcName="InvalidTokenException" msgFaultTypeQname="junitservice:InvalidTokenException"/>
             </bpdm:messagingtask>
             <bpdm:messagingtask eventType="end: message" operation="EventStartMessage" partnerLink="isDoneAndInterfacePlkVar" portType="this:ForInterface" isMyRole="true" enableSharing="false" bpdm:label="Message_End_Event" bpdm:ID="_nfs_sF90EeKBz_qQkNoSGg">
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
                         <bpel:from>$junitserviceIsDoneResponseMsg.parameters/return/text()</bpel:from>
-                        <bpel:to>$thisEventStartMessageResponse.body/text()</bpel:to>
-<mapper:mapperLink>
-  <mapper:vertice id="2099332886" targetPath="$thisEventStartMessageResponse.body/text()" targetedBy="1136219089-arg0"></mapper:vertice>
-  <mapper:vertice id="1136219089" sourcePath="$junitserviceIsDoneResponseMsg.parameters/return/text()"></mapper:vertice>
-</mapper:mapperLink>
+                        <bpel:to>$thisEventStartMessageResponse.body/text()</bpel:to><mapper:mapperLink><mapper:vertice id="2099332886" targetPath="$thisEventStartMessageResponse.body/text()" targetedBy="1136219089-arg0"></mapper:vertice><mapper:vertice id="1136219089" sourcePath="$junitserviceIsDoneResponseMsg.parameters/return/text()"></mapper:vertice></mapper:mapperLink>
                     </bpel:copy>
                 </bpdm:linkset>
                 <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisEventStartMessageResponse" bpdm:variableIsManaged="true" bpdm:messageType="this:EventStartMessageResponse" bpdm:ID="_wTQgAF90EeKBz_qQkNoSGg"></bpdm:linkset>

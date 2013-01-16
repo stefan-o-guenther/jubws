@@ -4,6 +4,8 @@
   <xs:element name="enqueueBenchmark" type="tns:enqueueBenchmark"/>
   <xs:element name="enqueueBenchmarkResponse" type="tns:enqueueBenchmarkResponse"/>
   <xs:element name="getResult" type="tns:getResult"/>
+  <xs:element name="getResultAsXML" type="tns:getResultAsXML"/>
+  <xs:element name="getResultAsXMLResponse" type="tns:getResultAsXMLResponse"/>
   <xs:element name="getResultResponse" type="tns:getResultResponse"/>
   <xs:element name="isDone" type="tns:isDone"/>
   <xs:element name="isDoneResponse" type="tns:isDoneResponse"/>
@@ -61,6 +63,16 @@
       <xs:element name="return" type="xs:boolean"/>
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="getResultAsXML">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getResultAsXMLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
   <xs:element name="InvalidTokenException" type="tns:InvalidTokenException"/>
   <xs:complexType name="InvalidTokenException">
     <xs:sequence/>
@@ -91,12 +103,20 @@
     <wsdl:part element="tns:isDone" name="parameters">
     </wsdl:part>
   </wsdl:message>
+  <wsdl:message name="getResultAsXMLResponse">
+    <wsdl:part element="tns:getResultAsXMLResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
   <wsdl:message name="InvalidTokenException">
     <wsdl:part element="tns:InvalidTokenException" name="InvalidTokenException">
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="BenchmarkNotDoneException">
     <wsdl:part element="tns:BenchmarkNotDoneException" name="BenchmarkNotDoneException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getResultAsXML">
+    <wsdl:part element="tns:getResultAsXML" name="parameters">
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="getResult">
@@ -136,6 +156,18 @@
       <wsdl:output message="tns:isDoneResponse" name="isDoneResponse">
     </wsdl:output>
       <wsdl:fault message="tns:InvalidTokenException" name="InvalidTokenException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getResultAsXML">
+      <wsdl:input message="tns:getResultAsXML" name="getResultAsXML">
+    </wsdl:input>
+      <wsdl:output message="tns:getResultAsXMLResponse" name="getResultAsXMLResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:InvalidTokenException" name="InvalidTokenException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:ExecutionException" name="ExecutionException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:BenchmarkNotDoneException" name="BenchmarkNotDoneException">
     </wsdl:fault>
     </wsdl:operation>
   </wsdl:portType>
@@ -178,6 +210,24 @@
       </wsdl:output>
       <wsdl:fault name="InvalidTokenException">
         <soap:fault name="InvalidTokenException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getResultAsXML">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getResultAsXML">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getResultAsXMLResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InvalidTokenException">
+        <soap:fault name="InvalidTokenException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ExecutionException">
+        <soap:fault name="ExecutionException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="BenchmarkNotDoneException">
+        <soap:fault name="BenchmarkNotDoneException" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
