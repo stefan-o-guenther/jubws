@@ -51,5 +51,19 @@ public interface JUnitBenchmarkWebService {
 	 */
     BenchmarkResult getResult(int token) throws ExecutionException, BenchmarkNotDoneException, InvalidTokenException ;
 
+	/**
+	 * Retrieves the results for a request as XML.
+	 * 
+	 * @param token The token to identify the request.
+	 * 
+	 * @return Returns the result of the requested benchmark as XML string.
+	 * 
+	 * @exception ExecutionException if the Benchmark threw a exception.
+	 * @exception InvalidTokenException if the token doesn't refer to a request.
+	 * @exception BenchmarkNotDoneException if the benchmark is not yet done.
+	 * 
+	 */
+    String getResultAsXML(int token) throws ExecutionException, BenchmarkNotDoneException, InvalidTokenException ;
+
 }
 

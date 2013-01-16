@@ -39,6 +39,12 @@ public class JUnitBenchmarkWebServiceImpl implements JUnitBenchmarkWebService {
 		return benchmarkService.getResult(token);
 	}
 	
+	@Override
+	public String getResultAsXML(int token) throws ExecutionException,
+			BenchmarkNotDoneException, InvalidTokenException {
+		return benchmarkService.getResult(token).toXML();
+	}
+	
 	public void setBenchmarkService(JUnitBenchmarkService benchmarkService) {
 		this.benchmarkService = benchmarkService;
 	}
@@ -46,6 +52,9 @@ public class JUnitBenchmarkWebServiceImpl implements JUnitBenchmarkWebService {
 	public JUnitBenchmarkService getBenchmarkService() {
 		return benchmarkService;
 	}
+
+
+
 
 	
 }
