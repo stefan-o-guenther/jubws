@@ -25,7 +25,7 @@ public class FileAccessBenchmark {
 	  @Test
 	  @BenchmarkOptions(callgc = false, benchmarkRounds = 20, warmupRounds = 3)
 	  public void resourceAccessTest() throws Exception {
-		InputStream in = getClass().getResourceAsStream("/resources/helloworld");
+		InputStream in = getClass().getResourceAsStream("/helloworld");
 		Scanner scanner = new Scanner(in).useDelimiter("\\z");
 		String content = scanner.hasNext()?scanner.next():"";
 		System.out.println("File content: >"+content+"<");
