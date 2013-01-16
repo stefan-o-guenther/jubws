@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bpel:process xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ode="http://www.apache.org/ode/type/extension" xmlns:Interface="http://example.com/Benchmark/Interface" xmlns:this="http://example.com/Benchmark/getResult" xmlns:junitservice="http://server.jubws.htwaalen.de/" xmlns:External_Services="http://example.com/Benchmark/External_Services" xmlns:diag="http://example.com/Benchmark" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpmn="http://www.intalio.com/bpms" xmlns:atomic="http://ode.apache.org/atomicScope" queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" bpmn:label="getResult" name="getResult" bpmn:id="_Uene8F91EeKBz_qQkNoSGg" targetNamespace="http://example.com/Benchmark/getResult">
+  <bpel:import namespace="http://server.jubws.htwaalen.de/" location="services/junitservice.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <bpel:import namespace="http://example.com/Benchmark" location="Benchmark.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <bpel:import namespace="http://example.com/Benchmark/getResult" location="Benchmark-getResult.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <bpel:partnerLinks>
+    <bpel:partnerLink name="external_ServicesAndGetResultForJUnitBenchmarkWebServiceImplPortPlkVar" partnerLinkType="diag:External_ServicesAndGetResultForJUnitBenchmarkWebServiceImplPortPlk" initializePartnerRole="yes" partnerRole="External_Services_for_getResult"/>
+    <bpel:partnerLink name="interfaceAndGetResultPlkVar" partnerLinkType="diag:InterfaceAndGetResult" myRole="getResult_for_Interface"/>
+  </bpel:partnerLinks>
+  <bpel:variables>
+    <bpel:variable name="junitserviceGetResultMsg" messageType="junitservice:getResult"/>
+    <bpel:variable name="junitserviceGetResultResponseMsg" messageType="junitservice:getResultResponse"/>
+    <bpel:variable name="thisEventStartMessageRequest" messageType="this:EventStartMessageRequest"/>
+    <bpel:variable name="thisEventStartMessageResponse" messageType="this:EventStartMessageResponse"/>
+  </bpel:variables>
+  <bpel:sequence>
+    <bpel:receive partnerLink="interfaceAndGetResultPlkVar" portType="this:ForInterface" operation="EventStartMessage" variable="thisEventStartMessageRequest" createInstance="yes" bpmn:label="Message_Start_Event" name="Message_Start_Event" bpmn:id="_eICQQF91EeKBz_qQkNoSGg"></bpel:receive>
+    <bpel:assign name="init-variables-getResult" bpmn:id="_eICQQF91EeKBz_qQkNoSGg">
+      <bpel:copy bpmn:label="$junitserviceGetResultMsg">
+        <bpel:from>
+          <bpel:literal>
+<junitservice:getResult>
+  <arg0></arg0>
+</junitservice:getResult></bpel:literal>
+        </bpel:from>
+        <bpel:to>$junitserviceGetResultMsg.parameters</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$thisEventStartMessageResponse">
+        <bpel:from>
+          <bpel:literal>
+<this:EventStartMessageResponse></this:EventStartMessageResponse></bpel:literal>
+        </bpel:from>
+        <bpel:to>$thisEventStartMessageResponse.body</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:assign bpmn:label="Invoke Service" name="Invoke_Service" bpmn:id="_a_tNYF91EeKBz_qQkNoSGg">
+      <bpel:copy>
+        <bpel:from>$thisEventStartMessageRequest.body/text()</bpel:from>
+        <bpel:to>$junitserviceGetResultMsg.parameters/arg0</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:invoke partnerLink="external_ServicesAndGetResultForJUnitBenchmarkWebServiceImplPortPlkVar" portType="junitservice:JUnitBenchmarkWebService" operation="getResult" inputVariable="junitserviceGetResultMsg" outputVariable="junitserviceGetResultResponseMsg" bpmn:label="Invoke Service" name="Invoke_Service-1" bpmn:id="_a_tNYF91EeKBz_qQkNoSGg"></bpel:invoke>
+    <bpel:assign bpmn:label="Message_End_Event" name="Message_End_Event" bpmn:id="_g6UKoF91EeKBz_qQkNoSGg">
+      <bpel:copy>
+        <bpel:from>$junitserviceGetResultResponseMsg.parameters/return/className/text()</bpel:from>
+        <bpel:to>$thisEventStartMessageResponse.body</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:reply partnerLink="interfaceAndGetResultPlkVar" portType="this:ForInterface" operation="EventStartMessage" variable="thisEventStartMessageResponse" bpmn:label="Message_End_Event" name="Message_End_Event-1" bpmn:id="_g6UKoF91EeKBz_qQkNoSGg"></bpel:reply>
+  </bpel:sequence>
+</bpel:process>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bpel:process xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ode="http://www.apache.org/ode/type/extension" xmlns:Interface="http://example.com/Benchmark/Interface" xmlns:enqueueBenchmarkParams="http://www.example.org/enqueueBenchmarkParams" xmlns:tns="http://server.jubws.htwaalen.de/" xmlns:this="http://example.com/Benchmark/enqueueBenchmark" xmlns:External_Services="http://example.com/Benchmark/External_Services" xmlns:diag="http://example.com/Benchmark" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpmn="http://www.intalio.com/bpms" xmlns:atomic="http://ode.apache.org/atomicScope" queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" bpmn:label="enqueueBenchmark" name="enqueueBenchmark" bpmn:id="_aQjaoF9wEeKoI5D8SPNkHg" targetNamespace="http://example.com/Benchmark/enqueueBenchmark">
+  <bpel:import namespace="http://server.jubws.htwaalen.de/" location="services/junitservice.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <bpel:import namespace="http://example.com/Benchmark" location="Benchmark.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <bpel:import namespace="http://example.com/Benchmark/enqueueBenchmark" location="Benchmark-enqueueBenchmark.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <bpel:partnerLinks>
+    <bpel:partnerLink name="external_ServicesAndEnqueueBenchmarkForJUnitBenchmarkWebServiceImplPortPlkVar" partnerLinkType="diag:External_ServicesAndEnqueueBenchmarkForJUnitBenchmarkWebServiceImplPortPlk" initializePartnerRole="yes" partnerRole="External_Services_for_enqueueBenchmark"/>
+    <bpel:partnerLink name="enqueueBenchmarkAndInterfacePlkVar" partnerLinkType="diag:enqueueBenchmarkAndInterface" myRole="enqueueBenchmark_for_Interface"/>
+  </bpel:partnerLinks>
+  <bpel:variables>
+    <bpel:variable name="tnsEnqueueBenchmarkMsg" messageType="tns:enqueueBenchmark"/>
+    <bpel:variable name="tnsEnqueueBenchmarkResponseMsg" messageType="tns:enqueueBenchmarkResponse"/>
+    <bpel:variable name="thisEventStartMessageRequest" messageType="this:EventStartMessageRequest"/>
+    <bpel:variable name="thisEventStartMessageResponse" messageType="this:EventStartMessageResponse"/>
+  </bpel:variables>
+  <bpel:sequence>
+    <bpel:receive partnerLink="enqueueBenchmarkAndInterfacePlkVar" portType="this:ForInterface" operation="EventStartMessage" variable="thisEventStartMessageRequest" createInstance="yes" bpmn:label="Message_Start_Event" name="Message_Start_Event" bpmn:id="_pOiAYF9xEeKoI5D8SPNkHg"></bpel:receive>
+    <bpel:assign name="init-variables-enqueueBenchmark" bpmn:id="_pOiAYF9xEeKoI5D8SPNkHg">
+      <bpel:copy bpmn:label="$tnsEnqueueBenchmarkMsg">
+        <bpel:from>
+          <bpel:literal>
+<tns:enqueueBenchmark>
+  <arg0></arg0>
+  <arg1></arg1>
+</tns:enqueueBenchmark></bpel:literal>
+        </bpel:from>
+        <bpel:to>$tnsEnqueueBenchmarkMsg.parameters</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$thisEventStartMessageResponse">
+        <bpel:from>
+          <bpel:literal>
+<this:EventStartMessageResponse></this:EventStartMessageResponse></bpel:literal>
+        </bpel:from>
+        <bpel:to>$thisEventStartMessageResponse.body</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:assign bpmn:label="Invoke Service" name="Invoke_Service" bpmn:id="_gx8rEF9wEeKoI5D8SPNkHg">
+      <bpel:copy>
+        <bpel:from>$thisEventStartMessageRequest.body/enqueueBenchmarkParams:path/text()</bpel:from>
+        <bpel:to>$tnsEnqueueBenchmarkMsg.parameters/arg0</bpel:to>
+      </bpel:copy>
+      <bpel:copy>
+        <bpel:from>$thisEventStartMessageRequest.body/enqueueBenchmarkParams:classname/text()</bpel:from>
+        <bpel:to>$tnsEnqueueBenchmarkMsg.parameters/arg1</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:invoke partnerLink="external_ServicesAndEnqueueBenchmarkForJUnitBenchmarkWebServiceImplPortPlkVar" portType="tns:JUnitBenchmarkWebService" operation="enqueueBenchmark" inputVariable="tnsEnqueueBenchmarkMsg" outputVariable="tnsEnqueueBenchmarkResponseMsg" bpmn:label="Invoke Service" name="Invoke_Service-1" bpmn:id="_gx8rEF9wEeKoI5D8SPNkHg"></bpel:invoke>
+    <bpel:assign bpmn:label="Message_End_Event" name="Message_End_Event" bpmn:id="_xZRpsF9wEeKoI5D8SPNkHg">
+      <bpel:copy>
+        <bpel:from>$tnsEnqueueBenchmarkResponseMsg.parameters/return/text()</bpel:from>
+        <bpel:to>$thisEventStartMessageResponse.body</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:reply partnerLink="enqueueBenchmarkAndInterfacePlkVar" portType="this:ForInterface" operation="EventStartMessage" variable="thisEventStartMessageResponse" bpmn:label="Message_End_Event" name="Message_End_Event-1" bpmn:id="_xZRpsF9wEeKoI5D8SPNkHg"></bpel:reply>
+  </bpel:sequence>
+</bpel:process>

@@ -1,0 +1,84 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:this="http://thisdiagram/isDone" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:junitservice="http://server.jubws.htwaalen.de/" xmlns:External_Services="http://thisdiagram/External_Services" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/isDone">
+    <bpdm:dependencies version="6000089">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/isDone" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://server.jubws.htwaalen.de/" bpdm:prefix="junitservice" bpdm:comment="contrib=&apos;project:///services/junitservice.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/External_Services" bpdm:prefix="External_Services" bpdm:comment="contrib=&apos;partner-pool:///_c-njYF9wEeKoI5D8SPNkHg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_XNkx0F9wEeKoI5D8SPNkHg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types">
+            <wsdl:portType name="ForInterface">
+                <wsdl:operation name="EventStartMessage" bpdm:source="partner-pool:///_XNkx0F9wEeKoI5D8SPNkHg">
+                    <wsdl:input message="this:EventStartMessageRequest" name="EventStartMessage"/>
+                    <wsdl:output message="this:EventStartMessageResponse" name="EventStartMessageResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <xs:element name="EventStartMessageRequest" type="xs:string" bpdm:source="partner-pool:///_XNkx0F9wEeKoI5D8SPNkHg"/>
+            <wsdl:message name="EventStartMessageRequest" bpdm:source="partner-pool:///_XNkx0F9wEeKoI5D8SPNkHg">
+                <wsdl:part name="body" element="this:EventStartMessageRequest"/>
+            </wsdl:message>
+            <xs:element name="EventStartMessageResponse" type="xs:string" bpdm:source="partner-pool:///_XNkx0F9wEeKoI5D8SPNkHg"/>
+            <wsdl:message name="EventStartMessageResponse" bpdm:source="partner-pool:///_XNkx0F9wEeKoI5D8SPNkHg">
+                <wsdl:part name="body" element="this:EventStartMessageResponse"/>
+            </wsdl:message>
+            <bpel:binding name="CanonicBindingForInterface" type="this:ForInterface" bpdm:isSynchronized="true"/>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_XNkx0F9wEeKoI5D8SPNkHg" bpdm:label="Interface"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_c-njYF9wEeKoI5D8SPNkHg" bpdm:label="External Services"/>
+        <bpdm:namespaceContributor bpdm:url="project:///services/junitservice.wsdl"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="isDone" bpdm:ID="_jsAroF90EeKBz_qQkNoSGg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="isDoneAndInterfacePlkVar" partnerLinkType="diag:isDoneAndInterface" myRole="isDone_for_Interface" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForInterface" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/isDone/Interface" bpdm:providedIsDefault="true" bpdm:clientTasks="_jsAroF90EeKBz_qQkNoSGg:_nfs_sF90EeKBz_qQkNoSGg, _jsAroF90EeKBz_qQkNoSGg:_mndwIF90EeKBz_qQkNoSGg" bpdm:isManaged="true" bpdm:otherPoolId="_XNkx0F9wEeKoI5D8SPNkHg"/>
+            <bpel:partnerLink name="isDoneAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlkVar" partnerLinkType="diag:isDoneAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlk" initializePartnerRole="yes" partnerRole="External_Services_for_isDone" bpdm:invokedService="junitservice:JUnitBenchmarkWebServiceImplService" bpdm:invokedPort="JUnitBenchmarkWebServiceImplPort" bpdm:invokedSOAPAddress="http://localhost:9000/junitservice" bpdm:invokedIsDefault="true" bpdm:clientTasks="_jsAroF90EeKBz_qQkNoSGg:_ln_QIF90EeKBz_qQkNoSGg" bpdm:isManaged="true" bpdm:otherPoolId="_c-njYF9wEeKoI5D8SPNkHg"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="thisEventStartMessageRequest" messageType="this:EventStartMessageRequest" bpdm:id="_vpo7QF90EeKBz_qQkNoSGg" bpdm:messageIds="inc:_vpYckF90EeKBz_qQkNoSGg"/>
+            <bpel:variable name="thisEventStartMessageResponse" messageType="this:EventStartMessageResponse" bpdm:id="_wTXNsF90EeKBz_qQkNoSGg" bpdm:messageIds=" out:_wTQgAF90EeKBz_qQkNoSGg">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:EventStartMessageResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="junitserviceIsDoneMsg" messageType="junitservice:isDone" binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="0" bpdm:id="_zw6SoF90EeKBz_qQkNoSGg" bpdm:messageIds=" out:_zws3QF90EeKBz_qQkNoSGg">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="junitservice:isDone" bpdm:linkedPart="parameters" bpdm:binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:opMsgType="0" bpdm:operation="isDone"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="junitserviceIsDoneResponseMsg" messageType="junitservice:isDoneResponse" binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" operation="isDone" opMsgType="1" bpdm:id="_0HV1pV90EeKBz_qQkNoSGg" bpdm:messageIds="inc:_0GzDEF90EeKBz_qQkNoSGg"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="EventStartMessage" partnerLink="isDoneAndInterfacePlkVar" portType="this:ForInterface" isMyRole="true" enableSharing="false" bpdm:label="Message_Start_Event" bpdm:ID="_mndwIF90EeKBz_qQkNoSGg">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisEventStartMessageRequest" bpdm:variableIsManaged="true" bpdm:messageType="this:EventStartMessageRequest" bpdm:ID="_vpYckF90EeKBz_qQkNoSGg"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="isDone" partnerLink="isDoneAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlkVar" portType="junitservice:JUnitBenchmarkWebService" isMyRole="false" enableSharing="false" bpdm:label="Invoke Service" bpdm:ID="_ln_QIF90EeKBz_qQkNoSGg">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisEventStartMessageRequest.body/text()</bpel:from>
+                        <bpel:to>$junitserviceIsDoneMsg.parameters/arg0/text()</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="221341226" targetPath="$junitserviceIsDoneMsg.parameters/arg0/text()" targetedBy="905181794-arg0"></mapper:vertice>
+  <mapper:vertice id="905181794" sourcePath="$thisEventStartMessageRequest.body/text()"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="junitserviceIsDoneMsg" bpdm:variableIsManaged="true" bpdm:messageType="junitservice:isDone" bpdm:binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_zws3QF90EeKBz_qQkNoSGg"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="junitserviceIsDoneResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="junitservice:isDoneResponse" bpdm:binding="junitservice:JUnitBenchmarkWebServiceImplServiceSoapBinding" bpdm:ID="_0GzDEF90EeKBz_qQkNoSGg"></bpdm:linkset>
+                <bpdm:thrownFault msgFaultNcName="InvalidTokenException" msgFaultTypeQname="junitservice:InvalidTokenException"/>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask eventType="end: message" operation="EventStartMessage" partnerLink="isDoneAndInterfacePlkVar" portType="this:ForInterface" isMyRole="true" enableSharing="false" bpdm:label="Message_End_Event" bpdm:ID="_nfs_sF90EeKBz_qQkNoSGg">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$junitserviceIsDoneResponseMsg.parameters/return/text()</bpel:from>
+                        <bpel:to>$thisEventStartMessageResponse.body/text()</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="2099332886" targetPath="$thisEventStartMessageResponse.body/text()" targetedBy="1136219089-arg0"></mapper:vertice>
+  <mapper:vertice id="1136219089" sourcePath="$junitserviceIsDoneResponseMsg.parameters/return/text()"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisEventStartMessageResponse" bpdm:variableIsManaged="true" bpdm:messageType="this:EventStartMessageResponse" bpdm:ID="_wTQgAF90EeKBz_qQkNoSGg"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

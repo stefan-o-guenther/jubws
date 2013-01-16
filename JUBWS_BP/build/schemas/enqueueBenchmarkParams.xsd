@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/enqueueBenchmarkParams" xmlns:tns="http://www.example.org/enqueueBenchmarkParams" elementFormDefault="qualified">
+	<complexType name="enqueueBenchmarkParams">
+		<sequence>
+			<element name="path" type="string" />
+			<element name="classname" type="string" />
+		</sequence>
+	</complexType>
+</schema>

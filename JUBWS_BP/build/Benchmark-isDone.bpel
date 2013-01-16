@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bpel:process xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ode="http://www.apache.org/ode/type/extension" xmlns:Interface="http://example.com/Benchmark/Interface" xmlns:this="http://example.com/Benchmark/isDone" xmlns:junitservice="http://server.jubws.htwaalen.de/" xmlns:External_Services="http://example.com/Benchmark/External_Services" xmlns:diag="http://example.com/Benchmark" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpmn="http://www.intalio.com/bpms" xmlns:atomic="http://ode.apache.org/atomicScope" queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0" bpmn:label="isDone" name="isDone" bpmn:id="_jsAroF90EeKBz_qQkNoSGg" targetNamespace="http://example.com/Benchmark/isDone">
+  <bpel:import namespace="http://server.jubws.htwaalen.de/" location="services/junitservice.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <bpel:import namespace="http://example.com/Benchmark" location="Benchmark.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <bpel:import namespace="http://example.com/Benchmark/isDone" location="Benchmark-isDone.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <bpel:partnerLinks>
+    <bpel:partnerLink name="isDoneAndInterfacePlkVar" partnerLinkType="diag:isDoneAndInterface" myRole="isDone_for_Interface"/>
+    <bpel:partnerLink name="isDoneAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlkVar" partnerLinkType="diag:isDoneAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlk" initializePartnerRole="yes" partnerRole="External_Services_for_isDone"/>
+  </bpel:partnerLinks>
+  <bpel:variables>
+    <bpel:variable name="thisEventStartMessageRequest" messageType="this:EventStartMessageRequest"/>
+    <bpel:variable name="thisEventStartMessageResponse" messageType="this:EventStartMessageResponse"/>
+    <bpel:variable name="junitserviceIsDoneMsg" messageType="junitservice:isDone"/>
+    <bpel:variable name="junitserviceIsDoneResponseMsg" messageType="junitservice:isDoneResponse"/>
+  </bpel:variables>
+  <bpel:sequence>
+    <bpel:receive partnerLink="isDoneAndInterfacePlkVar" portType="this:ForInterface" operation="EventStartMessage" variable="thisEventStartMessageRequest" createInstance="yes" bpmn:label="Message_Start_Event" name="Message_Start_Event" bpmn:id="_mndwIF90EeKBz_qQkNoSGg"></bpel:receive>
+    <bpel:assign name="init-variables-isDone" bpmn:id="_mndwIF90EeKBz_qQkNoSGg">
+      <bpel:copy bpmn:label="$thisEventStartMessageResponse">
+        <bpel:from>
+          <bpel:literal>
+<this:EventStartMessageResponse></this:EventStartMessageResponse></bpel:literal>
+        </bpel:from>
+        <bpel:to>$thisEventStartMessageResponse.body</bpel:to>
+      </bpel:copy>
+      <bpel:copy bpmn:label="$junitserviceIsDoneMsg">
+        <bpel:from>
+          <bpel:literal>
+<junitservice:isDone>
+  <arg0></arg0>
+</junitservice:isDone></bpel:literal>
+        </bpel:from>
+        <bpel:to>$junitserviceIsDoneMsg.parameters</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:assign bpmn:label="Invoke Service" name="Invoke_Service" bpmn:id="_ln_QIF90EeKBz_qQkNoSGg">
+      <bpel:copy>
+        <bpel:from>$thisEventStartMessageRequest.body/text()</bpel:from>
+        <bpel:to>$junitserviceIsDoneMsg.parameters/arg0</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:invoke partnerLink="isDoneAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlkVar" portType="junitservice:JUnitBenchmarkWebService" operation="isDone" inputVariable="junitserviceIsDoneMsg" outputVariable="junitserviceIsDoneResponseMsg" bpmn:label="Invoke Service" name="Invoke_Service-1" bpmn:id="_ln_QIF90EeKBz_qQkNoSGg"></bpel:invoke>
+    <bpel:assign bpmn:label="Message_End_Event" name="Message_End_Event" bpmn:id="_nfs_sF90EeKBz_qQkNoSGg">
+      <bpel:copy>
+        <bpel:from>$junitserviceIsDoneResponseMsg.parameters/return/text()</bpel:from>
+        <bpel:to>$thisEventStartMessageResponse.body</bpel:to>
+      </bpel:copy>
+    </bpel:assign>
+    <bpel:reply partnerLink="isDoneAndInterfacePlkVar" portType="this:ForInterface" operation="EventStartMessage" variable="thisEventStartMessageResponse" bpmn:label="Message_End_Event" name="Message_End_Event-1" bpmn:id="_nfs_sF90EeKBz_qQkNoSGg"></bpel:reply>
+  </bpel:sequence>
+</bpel:process>

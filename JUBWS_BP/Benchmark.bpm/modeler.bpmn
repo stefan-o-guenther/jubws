@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_XNZLoV9wEeKoI5D8SPNkHg" iD="_XNZLoF9wEeKoI5D8SPNkHg">
+  <pools xmi:type="bpmn:Pool" xmi:id="_XNkx0V9wEeKoI5D8SPNkHg" iD="_XNkx0F9wEeKoI5D8SPNkHg" name="Interface">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fbqNkF9wEeKoI5D8SPNkHg" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fbqNkV9wEeKoI5D8SPNkHg" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_8TSqwV9xEeKoI5D8SPNkHg" iD="_8TSqwF9xEeKoI5D8SPNkHg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8TSqwl9xEeKoI5D8SPNkHg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8TSqw19xEeKoI5D8SPNkHg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8TUf8F9xEeKoI5D8SPNkHg" key="defaultDeclarationName" value="enqueueBenchmarkEventStartMessageRequest"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8TVuEF9xEeKoI5D8SPNkHg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/enqueueBenchmark}EventStartMessageRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_8TUf8V9xEeKoI5D8SPNkHg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8TVHAF9xEeKoI5D8SPNkHg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8TVHAV9xEeKoI5D8SPNkHg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_8zsCEV9xEeKoI5D8SPNkHg" iD="_8zsCEF9xEeKoI5D8SPNkHg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8zsCEl9xEeKoI5D8SPNkHg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8zsCE19xEeKoI5D8SPNkHg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8zt3Ql9xEeKoI5D8SPNkHg" key="defaultDeclarationName" value="enqueueBenchmarkEventStartMessageResponse"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8zvscV9xEeKoI5D8SPNkHg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/enqueueBenchmark}EventStartMessageResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_8zueUF9xEeKoI5D8SPNkHg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8zvFYF9xEeKoI5D8SPNkHg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8zvscF9xEeKoI5D8SPNkHg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_vpg_cV90EeKBz_qQkNoSGg" iD="_vpg_cF90EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vpg_cl90EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vpg_c190EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vpkCwl90EeKBz_qQkNoSGg" key="defaultDeclarationName" value="isDoneEventStartMessageRequest"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vpntIF90EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/isDone}EventStartMessageRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_vplQ4F90EeKBz_qQkNoSGg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vpl38F90EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vpnGEF90EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_wTdUVl90EeKBz_qQkNoSGg" iD="_wTdUVV90EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wTdUV190EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wTdUWF90EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wTgXol90EeKBz_qQkNoSGg" key="defaultDeclarationName" value="isDoneEventStartMessageResponse"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wTkCAV90EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/isDone}EventStartMessageResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_wThlwF90EeKBz_qQkNoSGg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wTiz4F90EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wTkCAF90EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_m1P4AV91EeKBz_qQkNoSGg" iD="_m1P4AF91EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m1P4Al91EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m1P4A191EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m1TiYV91EeKBz_qQkNoSGg" key="defaultDeclarationName" value="getResultEventStartMessageRequest"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m1Xz0V91EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/getResult}EventStartMessageRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_m1UwgF91EeKBz_qQkNoSGg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m1WlsF91EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m1Xz0F91EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_n96JNl91EeKBz_qQkNoSGg" iD="_n96JNV91EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n96JN191EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n96JOF91EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n9-aol91EeKBz_qQkNoSGg" key="defaultDeclarationName" value="getResultEventStartMessageResponse"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n-CsEV91EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/getResult}EventStartMessageResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_n9_owF91EeKBz_qQkNoSGg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n-Bd8F91EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n-CsEF91EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_XNlY4V9wEeKoI5D8SPNkHg" iD="_XNlY4F9wEeKoI5D8SPNkHg" associations="_8TUf8V9xEeKoI5D8SPNkHg _8zueUF9xEeKoI5D8SPNkHg" name="Console Interface" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_8TQ1kV9xEeKoI5D8SPNkHg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_8zdYkV9xEeKoI5D8SPNkHg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_s4K5MV90EeKBz_qQkNoSGg" iD="_s4K5MF90EeKBz_qQkNoSGg" associations="_vplQ4F90EeKBz_qQkNoSGg _wThlwF90EeKBz_qQkNoSGg" name="Console Interface2">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_vpYckV90EeKBz_qQkNoSGg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_wTQgAV90EeKBz_qQkNoSGg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ifpwwV91EeKBz_qQkNoSGg" iD="_ifpwwF91EeKBz_qQkNoSGg" associations="_m1UwgF91EeKBz_qQkNoSGg _n9_owF91EeKBz_qQkNoSGg" name="Console Interface3">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_m1M0sV91EeKBz_qQkNoSGg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_n9q4oV91EeKBz_qQkNoSGg"/>
+    </vertices>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_aQjaoV9wEeKoI5D8SPNkHg" iD="_aQjaoF9wEeKoI5D8SPNkHg" name="enqueueBenchmark">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_h1yRMV9xEeKoI5D8SPNkHg" iD="_h1yRMF9xEeKoI5D8SPNkHg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h1yRMl9xEeKoI5D8SPNkHg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1yRM19xEeKoI5D8SPNkHg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h13JsV9xEeKoI5D8SPNkHg" key="defaultDeclarationName" value="tnsEnqueueBenchmarkMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h18pQV9xEeKoI5D8SPNkHg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}enqueueBenchmark"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_h14-4F9xEeKoI5D8SPNkHg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h160EF9xEeKoI5D8SPNkHg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h18pQF9xEeKoI5D8SPNkHg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_icYXIV9xEeKoI5D8SPNkHg" iD="_icYXIF9xEeKoI5D8SPNkHg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_icYXIl9xEeKoI5D8SPNkHg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_icYXI19xEeKoI5D8SPNkHg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_icd2sl9xEeKoI5D8SPNkHg" key="defaultDeclarationName" value="tnsEnqueueBenchmarkResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iclLcV9xEeKoI5D8SPNkHg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}enqueueBenchmarkResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_icgS8F9xEeKoI5D8SPNkHg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_icivMF9xEeKoI5D8SPNkHg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iclLcF9xEeKoI5D8SPNkHg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_8TW8MV9xEeKoI5D8SPNkHg" iD="_8TW8MF9xEeKoI5D8SPNkHg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8TW8Ml9xEeKoI5D8SPNkHg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8TW8M19xEeKoI5D8SPNkHg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8Tb0sV9xEeKoI5D8SPNkHg" key="defaultDeclarationName" value="thisEventStartMessageRequest"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8TgGIV9xEeKoI5D8SPNkHg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/enqueueBenchmark}EventStartMessageRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_8TdC0F9xEeKoI5D8SPNkHg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8TeQ8F9xEeKoI5D8SPNkHg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8TgGIF9xEeKoI5D8SPNkHg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_8zgb4V9xEeKoI5D8SPNkHg" iD="_8zgb4F9xEeKoI5D8SPNkHg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8zgb4l9xEeKoI5D8SPNkHg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8zgb419xEeKoI5D8SPNkHg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8zktUl9xEeKoI5D8SPNkHg" key="defaultDeclarationName" value="thisEventStartMessageResponse"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8zqM4V9xEeKoI5D8SPNkHg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/enqueueBenchmark}EventStartMessageResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_8zmigF9xEeKoI5D8SPNkHg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8zoXsF9xEeKoI5D8SPNkHg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8zqM4F9xEeKoI5D8SPNkHg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_gx8rEV9wEeKoI5D8SPNkHg" iD="_gx8rEF9wEeKoI5D8SPNkHg" associations="_h14-4F9xEeKoI5D8SPNkHg _icgS8F9xEeKoI5D8SPNkHg" outgoingEdges="_xZazoV9wEeKoI5D8SPNkHg" incomingEdges="_9SNxIV9xEeKoI5D8SPNkHg" name="Invoke Service">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_h1iZkV9xEeKoI5D8SPNkHg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_ib8SQV9xEeKoI5D8SPNkHg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_xZRpsV9wEeKoI5D8SPNkHg" iD="_xZRpsF9wEeKoI5D8SPNkHg" associations="_8zmigF9xEeKoI5D8SPNkHg" incomingEdges="_xZazoV9wEeKoI5D8SPNkHg" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_8zdYkV9xEeKoI5D8SPNkHg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_pOiAYV9xEeKoI5D8SPNkHg" iD="_pOiAYF9xEeKoI5D8SPNkHg" associations="_8TdC0F9xEeKoI5D8SPNkHg" outgoingEdges="_9SNxIV9xEeKoI5D8SPNkHg" activityType="EventStartMessage">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_8TQ1kV9xEeKoI5D8SPNkHg"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_xZazoV9wEeKoI5D8SPNkHg" iD="_xZazoF9wEeKoI5D8SPNkHg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_9SNxIV9xEeKoI5D8SPNkHg" iD="_9SNxIF9xEeKoI5D8SPNkHg"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_c-njYV9wEeKoI5D8SPNkHg" iD="_c-njYF9wEeKoI5D8SPNkHg" name="External Services">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fD_7gF9wEeKoI5D8SPNkHg" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fD_7gV9wEeKoI5D8SPNkHg" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_h193YV9xEeKoI5D8SPNkHg" iD="_h193YF9xEeKoI5D8SPNkHg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h193Yl9xEeKoI5D8SPNkHg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h193Y19xEeKoI5D8SPNkHg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1_skl9xEeKoI5D8SPNkHg" key="defaultDeclarationName" value="tnsEnqueueBenchmarkMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h2BhwV9xEeKoI5D8SPNkHg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}enqueueBenchmark"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_h2AToF9xEeKoI5D8SPNkHg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h2A6sF9xEeKoI5D8SPNkHg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h2BhwF9xEeKoI5D8SPNkHg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_icPNMV9xEeKoI5D8SPNkHg" iD="_icPNMF9xEeKoI5D8SPNkHg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_icPNMl9xEeKoI5D8SPNkHg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_icPNM19xEeKoI5D8SPNkHg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_icTeol9xEeKoI5D8SPNkHg" key="defaultDeclarationName" value="tnsEnqueueBenchmarkResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_icXwEF9xEeKoI5D8SPNkHg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}enqueueBenchmarkResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_icUswF9xEeKoI5D8SPNkHg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_icV64F9xEeKoI5D8SPNkHg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_icXJAF9xEeKoI5D8SPNkHg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_zxEqsV90EeKBz_qQkNoSGg" iD="_zxEqsF90EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zxEqsl90EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zxEqs190EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zxI8IV90EeKBz_qQkNoSGg" key="defaultDeclarationName" value="tnsIsDoneMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zxN0oV90EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}isDone"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_zxKKQF90EeKBz_qQkNoSGg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zxL_cF90EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zxN0oF90EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_0HIaQV90EeKBz_qQkNoSGg" iD="_0HIaQF90EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0HIaQl90EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0HIaQ190EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0HN50V90EeKBz_qQkNoSGg" key="defaultDeclarationName" value="tnsIsDoneResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0HVOkV90EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}isDoneResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_0HQWEF90EeKBz_qQkNoSGg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0HSyUF90EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0HVOkF90EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_cnRoIV91EeKBz_qQkNoSGg" iD="_cnRoIF91EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cnRoIl91EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cnRoI191EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cnXuwF91EeKBz_qQkNoSGg" key="defaultDeclarationName" value="tnsGetResultMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cnfqkV91EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}getResult"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_cnaLAF91EeKBz_qQkNoSGg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cncnQF91EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cnfqkF91EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_dCj18V91EeKBz_qQkNoSGg" iD="_dCj18F91EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dCj18l91EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dCj18191EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dCrKs191EeKBz_qQkNoSGg" key="defaultDeclarationName" value="tnsGetResultResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dC1iwV91EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}getResultResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_dCu1EF91EeKBz_qQkNoSGg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dCyfcF91EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dC1iwF91EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_rgdcOF9wEeKoI5D8SPNkHg" iD="_rgX8oF9wEeKoI5D8SPNkHg" associations="_h2AToF9xEeKoI5D8SPNkHg _icUswF9xEeKoI5D8SPNkHg" name="enqueueBenchmark" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rgdcOV9wEeKoI5D8SPNkHg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rgdcOl9wEeKoI5D8SPNkHg" key="douri" value="project:///services/junitservice.wsdl?wsdloperationbound={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/enqueueBenchmark"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_h1iZkV9xEeKoI5D8SPNkHg"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_ib8SQV9xEeKoI5D8SPNkHg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ykXnCF90EeKBz_qQkNoSGg" iD="_ykSugV90EeKBz_qQkNoSGg" associations="_zxKKQF90EeKBz_qQkNoSGg _0HQWEF90EeKBz_qQkNoSGg" name="isDone" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ykXnCV90EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ykXnCl90EeKBz_qQkNoSGg" key="douri" value="project:///services/junitservice.wsdl?wsdloperationbound={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/isDone"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_zws3QV90EeKBz_qQkNoSGg"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_0GzDEV90EeKBz_qQkNoSGg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ZvlCQl91EeKBz_qQkNoSGg" iD="_Zvh-8F91EeKBz_qQkNoSGg" associations="_cnaLAF91EeKBz_qQkNoSGg _dCu1EF91EeKBz_qQkNoSGg" name="getResult" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZvlCQ191EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZvlCRF91EeKBz_qQkNoSGg" key="douri" value="project:///services/junitservice.wsdl?wsdloperationbound={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/getResult"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_cm84AV91EeKBz_qQkNoSGg"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_dCPF0V91EeKBz_qQkNoSGg"/>
+    </vertices>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_jsAroV90EeKBz_qQkNoSGg" iD="_jsAroF90EeKBz_qQkNoSGg" name="isDone">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_vpo7QV90EeKBz_qQkNoSGg" iD="_vpo7QF90EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vpo7Ql90EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vpo7Q190EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vpqJYl90EeKBz_qQkNoSGg" key="defaultDeclarationName" value="thisEventStartMessageRequest"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vprXgV90EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/isDone}EventStartMessageRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_vpqwcF90EeKBz_qQkNoSGg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vpqwcV90EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vprXgF90EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_wTXNsV90EeKBz_qQkNoSGg" iD="_wTXNsF90EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wTXNsl90EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wTXNs190EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wTaRAV90EeKBz_qQkNoSGg" key="defaultDeclarationName" value="thisEventStartMessageResponse"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wTctQF90EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/isDone}EventStartMessageResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_wTa4EF90EeKBz_qQkNoSGg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wTbfIF90EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wTcGMF90EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_zw65sF90EeKBz_qQkNoSGg" iD="_zw6SoF90EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zw65sV90EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zw65sl90EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zw-kEl90EeKBz_qQkNoSGg" key="defaultDeclarationName" value="junitserviceIsDoneMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zxDckV90EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}isDone"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_zxAZQF90EeKBz_qQkNoSGg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zxBnYF90EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zxDckF90EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_0HV1pl90EeKBz_qQkNoSGg" iD="_0HV1pV90EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0HV1p190EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0HV1qF90EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0HbVMl90EeKBz_qQkNoSGg" key="defaultDeclarationName" value="junitserviceIsDoneResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0HjRAF90EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}isDoneResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_0HdxcF90EeKBz_qQkNoSGg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0HfmoF90EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0Hip8F90EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ln_QIV90EeKBz_qQkNoSGg" iD="_ln_QIF90EeKBz_qQkNoSGg" associations="_zxAZQF90EeKBz_qQkNoSGg _0HdxcF90EeKBz_qQkNoSGg" outgoingEdges="_nfzGUV90EeKBz_qQkNoSGg" incomingEdges="_p3jA0V90EeKBz_qQkNoSGg" name="Invoke Service">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_zws3QV90EeKBz_qQkNoSGg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_0GzDEV90EeKBz_qQkNoSGg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_mndwIV90EeKBz_qQkNoSGg" iD="_mndwIF90EeKBz_qQkNoSGg" associations="_vpqwcF90EeKBz_qQkNoSGg" outgoingEdges="_p3jA0V90EeKBz_qQkNoSGg" activityType="EventStartMessage">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_vpYckV90EeKBz_qQkNoSGg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_nfs_sV90EeKBz_qQkNoSGg" iD="_nfs_sF90EeKBz_qQkNoSGg" associations="_wTa4EF90EeKBz_qQkNoSGg" incomingEdges="_nfzGUV90EeKBz_qQkNoSGg" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_wTQgAV90EeKBz_qQkNoSGg"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_nfzGUV90EeKBz_qQkNoSGg" iD="_nfzGUF90EeKBz_qQkNoSGg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_p3jA0V90EeKBz_qQkNoSGg" iD="_p3jA0F90EeKBz_qQkNoSGg"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_Uene8V91EeKBz_qQkNoSGg" iD="_Uene8F91EeKBz_qQkNoSGg" name="getResult">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_cnMvoV91EeKBz_qQkNoSGg" iD="_cnMvoF91EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cnMvol91EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cnMvo191EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cnOk0l91EeKBz_qQkNoSGg" key="defaultDeclarationName" value="junitserviceGetResultMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cnQaAV91EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}getResult"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_cnPL4F91EeKBz_qQkNoSGg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cnPy8F91EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cnQaAF91EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_dC2J1l91EeKBz_qQkNoSGg" iD="_dC2J1V91EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dC2w4F91EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dC2w4V91EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dC50MV91EeKBz_qQkNoSGg" key="defaultDeclarationName" value="junitserviceGetResultResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dC9ekF91EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://server.jubws.htwaalen.de/}getResultResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_dC7CUF91EeKBz_qQkNoSGg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dC8QcF91EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dC83gF91EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_m1Ya5l91EeKBz_qQkNoSGg" iD="_m1Ya5V91EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m1Ya5191EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m1Ya6F91EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m1cFQl91EeKBz_qQkNoSGg" key="defaultDeclarationName" value="thisEventStartMessageRequest"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m1gWsV91EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/getResult}EventStartMessageRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_m1d6cF91EeKBz_qQkNoSGg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m1fIkF91EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m1gWsF91EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_n9vKEV91EeKBz_qQkNoSGg" iD="_n9vKEF91EeKBz_qQkNoSGg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n9vKEl91EeKBz_qQkNoSGg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n9vKE191EeKBz_qQkNoSGg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n90CkF91EeKBz_qQkNoSGg" key="defaultDeclarationName" value="thisEventStartMessageResponse"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n95iIF91EeKBz_qQkNoSGg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/getResult}EventStartMessageResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_n91QsF91EeKBz_qQkNoSGg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n93F4F91EeKBz_qQkNoSGg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n947EF91EeKBz_qQkNoSGg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_a_tNYV91EeKBz_qQkNoSGg" iD="_a_tNYF91EeKBz_qQkNoSGg" associations="_cnPL4F91EeKBz_qQkNoSGg _dC7CUF91EeKBz_qQkNoSGg" outgoingEdges="_g6ZqMV91EeKBz_qQkNoSGg" incomingEdges="_gR-YQF91EeKBz_qQkNoSGg" name="Invoke Service">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_cm84AV91EeKBz_qQkNoSGg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_dCPF0V91EeKBz_qQkNoSGg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_eICQQV91EeKBz_qQkNoSGg" iD="_eICQQF91EeKBz_qQkNoSGg" associations="_m1d6cF91EeKBz_qQkNoSGg" outgoingEdges="_gR-YQF91EeKBz_qQkNoSGg" activityType="EventStartMessage">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_m1M0sV91EeKBz_qQkNoSGg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_g6UKoV91EeKBz_qQkNoSGg" iD="_g6UKoF91EeKBz_qQkNoSGg" associations="_n91QsF91EeKBz_qQkNoSGg" incomingEdges="_g6ZqMV91EeKBz_qQkNoSGg" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_n9q4oV91EeKBz_qQkNoSGg"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_gR-YQF91EeKBz_qQkNoSGg" iD="_gR9xMF91EeKBz_qQkNoSGg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_g6ZqMV91EeKBz_qQkNoSGg" iD="_g6ZqMF91EeKBz_qQkNoSGg"/>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_h1iZkV9xEeKoI5D8SPNkHg" iD="_h1iZkF9xEeKoI5D8SPNkHg" source="_gx8rEV9wEeKoI5D8SPNkHg" target="_rgdcOF9wEeKoI5D8SPNkHg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h1ogMF9xEeKoI5D8SPNkHg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1ogMV9xEeKoI5D8SPNkHg" key="douri" value="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/enqueueBenchmark/input/enqueueBenchmark"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_ib8SQV9xEeKoI5D8SPNkHg" iD="_ib8SQF9xEeKoI5D8SPNkHg" source="_rgdcOF9wEeKoI5D8SPNkHg" target="_gx8rEV9wEeKoI5D8SPNkHg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_icBKwF9xEeKoI5D8SPNkHg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_icBKwV9xEeKoI5D8SPNkHg" key="douri" value="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/enqueueBenchmark/output/enqueueBenchmarkResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_8TQ1kV9xEeKoI5D8SPNkHg" iD="_8TQ1kF9xEeKoI5D8SPNkHg" source="_XNlY4V9wEeKoI5D8SPNkHg" target="_pOiAYV9xEeKoI5D8SPNkHg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5TdAEF9yEeKBz_qQkNoSGg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5TdAEV9yEeKBz_qQkNoSGg" key="douri" value="project:///schemas/enqueueBenchmarkParams.xsd?xsdtype={http://www.example.org/enqueueBenchmarkParams}enqueueBenchmarkParams"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_8zdYkV9xEeKoI5D8SPNkHg" iD="_8zdYkF9xEeKoI5D8SPNkHg" source="_xZRpsV9wEeKoI5D8SPNkHg" target="_XNlY4V9wEeKoI5D8SPNkHg"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_vpYckV90EeKBz_qQkNoSGg" iD="_vpYckF90EeKBz_qQkNoSGg" source="_s4K5MV90EeKBz_qQkNoSGg" target="_mndwIV90EeKBz_qQkNoSGg"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_wTQgAV90EeKBz_qQkNoSGg" iD="_wTQgAF90EeKBz_qQkNoSGg" source="_nfs_sV90EeKBz_qQkNoSGg" target="_s4K5MV90EeKBz_qQkNoSGg"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_zws3QV90EeKBz_qQkNoSGg" iD="_zws3QF90EeKBz_qQkNoSGg" source="_ln_QIV90EeKBz_qQkNoSGg" target="_ykXnCF90EeKBz_qQkNoSGg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zwv6kF90EeKBz_qQkNoSGg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zwv6kV90EeKBz_qQkNoSGg" key="douri" value="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/isDone/input/isDone"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_0GzDEV90EeKBz_qQkNoSGg" iD="_0GzDEF90EeKBz_qQkNoSGg" source="_ykXnCF90EeKBz_qQkNoSGg" target="_ln_QIV90EeKBz_qQkNoSGg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0G5JsF90EeKBz_qQkNoSGg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0G5JsV90EeKBz_qQkNoSGg" key="douri" value="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/isDone/output/isDoneResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_cm84AV91EeKBz_qQkNoSGg" iD="_cm84AF91EeKBz_qQkNoSGg" source="_a_tNYV91EeKBz_qQkNoSGg" target="_ZvlCQl91EeKBz_qQkNoSGg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cnBwgF91EeKBz_qQkNoSGg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cnBwgV91EeKBz_qQkNoSGg" key="douri" value="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/getResult/input/getResult"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_dCPF0V91EeKBz_qQkNoSGg" iD="_dCPF0F91EeKBz_qQkNoSGg" source="_ZvlCQl91EeKBz_qQkNoSGg" target="_a_tNYV91EeKBz_qQkNoSGg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dCWakF91EeKBz_qQkNoSGg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dCWakV91EeKBz_qQkNoSGg" key="douri" value="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/getResult/output/getResultResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_m1M0sV91EeKBz_qQkNoSGg" iD="_m1M0sF91EeKBz_qQkNoSGg" source="_ifpwwV91EeKBz_qQkNoSGg" target="_eICQQV91EeKBz_qQkNoSGg"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_n9q4oV91EeKBz_qQkNoSGg" iD="_n9q4oF91EeKBz_qQkNoSGg" source="_g6UKoV91EeKBz_qQkNoSGg" target="_ifpwwV91EeKBz_qQkNoSGg"/>
+</bpmn:BpmnDiagram>

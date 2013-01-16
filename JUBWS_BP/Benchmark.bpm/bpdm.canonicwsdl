@@ -1,0 +1,72 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:junitservice="http://server.jubws.htwaalen.de/" xmlns:diag="http://thisdiagram" xmlns:External_Services="http://thisdiagram/External_Services" xmlns:Interface="http://thisdiagram/Interface" xmlns:enqueueBenchmark="http://thisdiagram/enqueueBenchmark" xmlns:getResult="http://thisdiagram/getResult" xmlns:isDone="http://thisdiagram/isDone" xmlns:tns="http://www.example.org/enqueueBenchmarkParams" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" targetNamespace="http://thisdiagram" bpdm:version="6000089" bpdm:canid="_XNZLoF9wEeKoI5D8SPNkHg" bpdm:displayName="diag">
+  <pnlk:partnerLinkType name="External_ServicesAndEnqueueBenchmark" bpdm:poolOneId="_c-njYF9wEeKoI5D8SPNkHg" bpdm:poolOneIsExecutable="false" bpdm:poolOneName="External Services" bpdm:poolTwoId="_aQjaoF9wEeKoI5D8SPNkHg" bpdm:poolTwoIsExecutable="true" bpdm:poolTwoName="enqueueBenchmark">
+    <pnlk:role name="External_Services_for_enqueueBenchmark" portType="External_Services:ForenqueueBenchmark" bpdm:thisPoolId="_c-njYF9wEeKoI5D8SPNkHg">
+      <wsdl:portType name="ForenqueueBenchmark">
+        <wsdl:operation name="enqueueBenchmark" bpdm:canid="_gx8rEF9wEeKoI5D8SPNkHg._rgX8oF9wEeKoI5D8SPNkHg." bpdm:dataobjectPointer="project:///services/junitservice.wsdl?wsdloperationbound={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/enqueueBenchmark">
+          <wsdl:input message="junitservice:enqueueBenchmark" name="enqueueBenchmark" bpdm:canid="_h1iZkF9xEeKoI5D8SPNkHg" bpdm:senderId="_gx8rEF9wEeKoI5D8SPNkHg" bpdm:receiverId="_rgX8oF9wEeKoI5D8SPNkHg" bpdm:senderName="Invoke Service" bpdm:receiverName="enqueueBenchmark" bpdm:receiverPoolId="_c-njYF9wEeKoI5D8SPNkHg" bpdm:dataobjectPointer="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/enqueueBenchmark/input/enqueueBenchmark"></wsdl:input>
+          <wsdl:output message="junitservice:enqueueBenchmarkResponse" name="enqueueBenchmarkResponse" bpdm:canid="_ib8SQF9xEeKoI5D8SPNkHg" bpdm:senderId="_rgX8oF9wEeKoI5D8SPNkHg" bpdm:receiverId="_gx8rEF9wEeKoI5D8SPNkHg" bpdm:senderName="enqueueBenchmark" bpdm:receiverName="Invoke Service" bpdm:receiverPoolId="_aQjaoF9wEeKoI5D8SPNkHg" bpdm:dataobjectPointer="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/enqueueBenchmark/output/enqueueBenchmarkResponse"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="External_ServicesAndEnqueueBenchmarkForJUnitBenchmarkWebServiceImplPortPlk" bpdm:canPlkId="_c-njYF9wEeKoI5D8SPNkHg-_aQjaoF9wEeKoI5D8SPNkHg">
+    <pnlk:role name="External_Services_for_enqueueBenchmark" portType="junitservice:JUnitBenchmarkWebService"></pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="External_ServicesAndGetResult" bpdm:poolOneId="_c-njYF9wEeKoI5D8SPNkHg" bpdm:poolOneIsExecutable="false" bpdm:poolOneName="External Services" bpdm:poolTwoId="_Uene8F91EeKBz_qQkNoSGg" bpdm:poolTwoIsExecutable="true" bpdm:poolTwoName="getResult">
+    <pnlk:role name="External_Services_for_getResult" portType="External_Services:ForgetResult" bpdm:thisPoolId="_c-njYF9wEeKoI5D8SPNkHg">
+      <wsdl:portType name="ForgetResult">
+        <wsdl:operation name="getResult" bpdm:canid="_Zvh-8F91EeKBz_qQkNoSGg._a_tNYF91EeKBz_qQkNoSGg." bpdm:dataobjectPointer="project:///services/junitservice.wsdl?wsdloperationbound={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/getResult">
+          <wsdl:input message="junitservice:getResult" name="getResult" bpdm:canid="_cm84AF91EeKBz_qQkNoSGg" bpdm:senderId="_a_tNYF91EeKBz_qQkNoSGg" bpdm:receiverId="_Zvh-8F91EeKBz_qQkNoSGg" bpdm:senderName="Invoke Service" bpdm:receiverName="getResult" bpdm:receiverPoolId="_c-njYF9wEeKoI5D8SPNkHg" bpdm:dataobjectPointer="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/getResult/input/getResult"></wsdl:input>
+          <wsdl:output message="junitservice:getResultResponse" name="getResultResponse" bpdm:canid="_dCPF0F91EeKBz_qQkNoSGg" bpdm:senderId="_Zvh-8F91EeKBz_qQkNoSGg" bpdm:receiverId="_a_tNYF91EeKBz_qQkNoSGg" bpdm:senderName="getResult" bpdm:receiverName="Invoke Service" bpdm:receiverPoolId="_Uene8F91EeKBz_qQkNoSGg" bpdm:dataobjectPointer="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/getResult/output/getResultResponse"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="External_ServicesAndGetResultForJUnitBenchmarkWebServiceImplPortPlk" bpdm:canPlkId="_c-njYF9wEeKoI5D8SPNkHg-_Uene8F91EeKBz_qQkNoSGg">
+    <pnlk:role name="External_Services_for_getResult" portType="junitservice:JUnitBenchmarkWebService"></pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="InterfaceAndGetResult" bpdm:poolOneId="_Uene8F91EeKBz_qQkNoSGg" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="getResult" bpdm:poolTwoId="_XNkx0F9wEeKoI5D8SPNkHg" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="Interface">
+    <pnlk:role name="getResult_for_Interface" portType="getResult:ForInterface" bpdm:thisPoolId="_Uene8F91EeKBz_qQkNoSGg">
+      <wsdl:portType name="ForInterface">
+        <wsdl:operation name="EventStartMessage" bpdm:canid="_eICQQF91EeKBz_qQkNoSGg._g6UKoF91EeKBz_qQkNoSGg._ifpwwF91EeKBz_qQkNoSGg.">
+          <wsdl:input message="getResult:EventStartMessageRequest" name="EventStartMessage" bpdm:canid="_m1M0sF91EeKBz_qQkNoSGg" bpdm:senderId="_ifpwwF91EeKBz_qQkNoSGg" bpdm:receiverId="_eICQQF91EeKBz_qQkNoSGg" bpdm:senderName="Console Interface3" bpdm:receiverName="EventStartMessage" bpdm:receiverPoolId="_Uene8F91EeKBz_qQkNoSGg" bpdm:bodyPartElemName="EventStartMessageRequest" bpdm:bodyPartElemType="xs:string"></wsdl:input>
+          <wsdl:output message="getResult:EventStartMessageResponse" name="EventStartMessageResponse" bpdm:canid="_n9q4oF91EeKBz_qQkNoSGg" bpdm:senderId="_g6UKoF91EeKBz_qQkNoSGg" bpdm:receiverId="_ifpwwF91EeKBz_qQkNoSGg" bpdm:senderName="EventEndMessage" bpdm:receiverName="Console Interface3" bpdm:receiverPoolId="_XNkx0F9wEeKoI5D8SPNkHg" bpdm:bodyPartElemName="EventStartMessageResponse" bpdm:bodyPartElemType="xs:string"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="enqueueBenchmarkAndInterface" bpdm:poolOneId="_aQjaoF9wEeKoI5D8SPNkHg" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="enqueueBenchmark" bpdm:poolTwoId="_XNkx0F9wEeKoI5D8SPNkHg" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="Interface">
+    <pnlk:role name="enqueueBenchmark_for_Interface" portType="enqueueBenchmark:ForInterface" bpdm:thisPoolId="_aQjaoF9wEeKoI5D8SPNkHg">
+      <wsdl:portType name="ForInterface">
+        <wsdl:operation name="EventStartMessage" bpdm:canid="_XNlY4F9wEeKoI5D8SPNkHg._pOiAYF9xEeKoI5D8SPNkHg._xZRpsF9wEeKoI5D8SPNkHg.">
+          <wsdl:input message="enqueueBenchmark:EventStartMessageRequest" name="EventStartMessage" bpdm:canid="_8TQ1kF9xEeKoI5D8SPNkHg" bpdm:senderId="_XNlY4F9wEeKoI5D8SPNkHg" bpdm:receiverId="_pOiAYF9xEeKoI5D8SPNkHg" bpdm:senderName="Console Interface" bpdm:receiverName="EventStartMessage" bpdm:receiverPoolId="_aQjaoF9wEeKoI5D8SPNkHg" bpdm:dataobjectPointer="project:///schemas/enqueueBenchmarkParams.xsd?xsdtype={http://www.example.org/enqueueBenchmarkParams}enqueueBenchmarkParams" bpdm:bodyPartElemName="EventStartMessageRequest" bpdm:bodyPartElemType="{http://www.example.org/enqueueBenchmarkParams}enqueueBenchmarkParams"></wsdl:input>
+          <wsdl:output message="enqueueBenchmark:EventStartMessageResponse" name="EventStartMessageResponse" bpdm:canid="_8zdYkF9xEeKoI5D8SPNkHg" bpdm:senderId="_xZRpsF9wEeKoI5D8SPNkHg" bpdm:receiverId="_XNlY4F9wEeKoI5D8SPNkHg" bpdm:senderName="EventEndMessage" bpdm:receiverName="Console Interface" bpdm:receiverPoolId="_XNkx0F9wEeKoI5D8SPNkHg" bpdm:bodyPartElemName="EventStartMessageResponse" bpdm:bodyPartElemType="xs:string"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="isDoneAndExternal_Services" bpdm:poolOneId="_c-njYF9wEeKoI5D8SPNkHg" bpdm:poolOneIsExecutable="false" bpdm:poolOneName="External Services" bpdm:poolTwoId="_jsAroF90EeKBz_qQkNoSGg" bpdm:poolTwoIsExecutable="true" bpdm:poolTwoName="isDone">
+    <pnlk:role name="External_Services_for_isDone" portType="External_Services:ForisDone" bpdm:thisPoolId="_c-njYF9wEeKoI5D8SPNkHg">
+      <wsdl:portType name="ForisDone">
+        <wsdl:operation name="isDone" bpdm:canid="_ln_QIF90EeKBz_qQkNoSGg._ykSugV90EeKBz_qQkNoSGg." bpdm:dataobjectPointer="project:///services/junitservice.wsdl?wsdloperationbound={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/isDone">
+          <wsdl:input message="junitservice:isDone" name="isDone" bpdm:canid="_zws3QF90EeKBz_qQkNoSGg" bpdm:senderId="_ln_QIF90EeKBz_qQkNoSGg" bpdm:receiverId="_ykSugV90EeKBz_qQkNoSGg" bpdm:senderName="Invoke Service" bpdm:receiverName="isDone" bpdm:receiverPoolId="_c-njYF9wEeKoI5D8SPNkHg" bpdm:dataobjectPointer="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/isDone/input/isDone"></wsdl:input>
+          <wsdl:output message="junitservice:isDoneResponse" name="isDoneResponse" bpdm:canid="_0GzDEF90EeKBz_qQkNoSGg" bpdm:senderId="_ykSugV90EeKBz_qQkNoSGg" bpdm:receiverId="_ln_QIF90EeKBz_qQkNoSGg" bpdm:senderName="isDone" bpdm:receiverName="Invoke Service" bpdm:receiverPoolId="_jsAroF90EeKBz_qQkNoSGg" bpdm:dataobjectPointer="project:///services/junitservice.wsdl?messageForBoundOperation={http://server.jubws.htwaalen.de/}JUnitBenchmarkWebServiceImplService/JUnitBenchmarkWebServiceImplPort/isDone/output/isDoneResponse"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="isDoneAndExternal_ServicesForJUnitBenchmarkWebServiceImplPortPlk" bpdm:canPlkId="_jsAroF90EeKBz_qQkNoSGg-_c-njYF9wEeKoI5D8SPNkHg">
+    <pnlk:role name="External_Services_for_isDone" portType="junitservice:JUnitBenchmarkWebService"></pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="isDoneAndInterface" bpdm:poolOneId="_jsAroF90EeKBz_qQkNoSGg" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="isDone" bpdm:poolTwoId="_XNkx0F9wEeKoI5D8SPNkHg" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="Interface">
+    <pnlk:role name="isDone_for_Interface" portType="isDone:ForInterface" bpdm:thisPoolId="_jsAroF90EeKBz_qQkNoSGg">
+      <wsdl:portType name="ForInterface">
+        <wsdl:operation name="EventStartMessage" bpdm:canid="_mndwIF90EeKBz_qQkNoSGg._nfs_sF90EeKBz_qQkNoSGg._s4K5MF90EeKBz_qQkNoSGg.">
+          <wsdl:input message="isDone:EventStartMessageRequest" name="EventStartMessage" bpdm:canid="_vpYckF90EeKBz_qQkNoSGg" bpdm:senderId="_s4K5MF90EeKBz_qQkNoSGg" bpdm:receiverId="_mndwIF90EeKBz_qQkNoSGg" bpdm:senderName="Console Interface2" bpdm:receiverName="EventStartMessage" bpdm:receiverPoolId="_jsAroF90EeKBz_qQkNoSGg" bpdm:bodyPartElemName="EventStartMessageRequest" bpdm:bodyPartElemType="xs:string"></wsdl:input>
+          <wsdl:output message="isDone:EventStartMessageResponse" name="EventStartMessageResponse" bpdm:canid="_wTQgAF90EeKBz_qQkNoSGg" bpdm:senderId="_nfs_sF90EeKBz_qQkNoSGg" bpdm:receiverId="_s4K5MF90EeKBz_qQkNoSGg" bpdm:senderName="EventEndMessage" bpdm:receiverName="Console Interface2" bpdm:receiverPoolId="_XNkx0F9wEeKoI5D8SPNkHg" bpdm:bodyPartElemName="EventStartMessageResponse" bpdm:bodyPartElemType="xs:string"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+</wsdl:definitions>
