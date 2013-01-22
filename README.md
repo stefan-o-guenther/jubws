@@ -45,6 +45,19 @@ Starting the Server
 When the server is ready you should be able to browse 
 [http://localhost:9000/junitservice?wsdl](http://localhost:9000/junitservice?wsdl) and see the WSDL file for the service.
 
+Running on Tomcat
+-----------------
+
+You can also run in on a Tomcat server use `mvn tomcat:run -Dmaven.tomcat.port=8081` to start one. You will find the WSDL at [http://localhost:8081/jubws/services/junitservice?wsdl](http://localhost:8081/jubws/services/junitservice?wsdl)
+
+On the Tomcat server there will also be an RSS Servlet available as [http://localhost:8081/jubws/rss](http://localhost:8081/jubws/rss).
+
+
+If you want to deploy to an existing server adjust the url, user and password for the Tomcat server in the pom.xml and use `mvn tomcat:deploy`.
+
+
+
+
 
 Starting the Client
 -------------------
@@ -53,6 +66,15 @@ Starting the Client
 
 * On the **client** side you will see the result of the benchmark as XML.
 * On the **server** side you will see debugging output and the output of the benchmark itself.
+
+
+Testing with soapUI
+-------------------
+
+In the subdirectory soapUI is a soapUI project you can import and execute the test case.
+
+
+![](https://raw.github.com/opensourceprojects/jubws/master/doc/images/soapUI.png)
 
 
 Using the Service with Intalio
@@ -68,6 +90,7 @@ You can find the Software at
 First start the Intalio BPMS server.
 The JUBWS_BP contains a Intalio Designer Project you can import with the designer.
 After you imported it you can deploy it to the server with the designer.
+Make sure the JUBWS server is also running (`mvn -Pserver`).
 
 ###Run a Benchmark from BPMS
 
