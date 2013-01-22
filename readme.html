@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="ReText 3.1.3">
+  <title>README</title>
+</head>
+<body>
+<h1>JUBWS</h1>
+<h2>Description</h2>
+<p>A webservice for executing junit benchmarks.
+For the following instructions you need to have Maven installed.</p>
+<h2>Documentation</h2>
+<h3>Doxygen</h3>
+<p>The Doxygen documentation can be generated using <code>doxygen</code> in the JUBWS directory.
+Than it can be found at <code>doc/generated/html/index.html</code>.</p>
+<h3>JavaDoc</h3>
+<p>The JavaDocs can be generated using Maven with <code>mvn site</code> and can then be found at <code>/target/site/index.html</code>. This site provides an overview of the maven project and links to the JavaDoc under <code>Project Reports</code>.</p>
+<h2>Compiling</h2>
+<p>The tests for the JUBWS Project depend on a subproject to be packaged first, but since this subproject is dependent on JUBWS to be packaged and installed in the local Maven repo. You need to build and install JUBWS first and skip its tests.</p>
+<pre><code>mvn install -DskipTests
+</code></pre>
+<p>Than you can package the subproject in de benchmarks directory.</p>
+<pre><code>cd benchmarks
+mvn package
+</code></pre>
+<p>After you successfully packaged the benchmarks project you can test JUBWS</p>
+<pre><code>cd ..
+mvn test
+</code></pre>
+<h2>Starting the Server</h2>
+<pre><code>mvn -Pserver -DskipTests
+</code></pre>
+<p>When the server is ready you should be able to browse 
+<a href="http://localhost:9000/junitservice?wsdl">http://localhost:9000/junitservice?wsdl</a> and see the WSDL file for the service.</p>
+<h2>Starting the Client</h2>
+<pre><code>mvn -Pclient -DskipTests
+</code></pre>
+<ul>
+<li>On the <strong>client</strong> side you will see the result of the benchmark as XML.</li>
+<li>On the <strong>server</strong> side you will see debugging output and the output of the benchmark itself.</li>
+</ul>
+<h2>Using the Service with Intalio</h2>
+<h3>Downloading the Software</h3>
+<p>You can find the Software at
+<a href="http://bpms.intalio.com/downloads.html">http://bpms.intalio.com/downloads.html</a></p>
+<h3>Deploying the Service</h3>
+<p>First start the Intalio BPMS server.
+The JUBWS_BP contains a Intalio Designer Project you can import with the designer.
+After you imported it you can deploy it to the server with the designer.</p>
+<h3>Run a Benchmark from BPMS</h3>
+<p>Go to the BPMS Management Console at <a href="http://localhost:8080/bpms-console">http://localhost:8080/bpms-console</a> and login <em>(default login: admin/changeit)</em>.
+<img alt="" src="doc/images/intalio_console_processes.png"></p>
+<p>Click on runBenchmark.
+<img alt="" src="doc/images/intalio_console_runbenchmark.png"></p>
+<p>And than on Start.
+<img alt="" src="doc/images/intalio_console_input.png"></p>
+<ul>
+<li><strong>path:</strong> file:PATH_TO_JUBWS/jubws/benchmarks/target/benchmarks-1.0.0.jar</li>
+<li><strong>classname:</strong> de.htwaalen.benchmarks.FileAccessBenchmark</li>
+<li>Click <strong>Submit</strong>.</li>
+</ul>
+<p><img alt="" src="doc/images/intalio_console_result.png"></p>
+</body>
+</html>

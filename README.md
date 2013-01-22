@@ -72,22 +72,22 @@ After you imported it you can deploy it to the server with the designer.
 ###Run a Benchmark from BPMS
 
 Go to the BPMS Management Console at [http://localhost:8080/bpms-console](http://localhost:8080/bpms-console) and login *(default login: admin/changeit)*.
-![](doc/images/intalio_console_processes.png)
+![](https://raw.github.com/opensourceprojects/jubws/master/doc/images/intalio_console_processes.png)
 
 
 
 Click on runBenchmark.
-![](doc/images/intalio_console_runbenchmark.png)
+![](https://raw.github.com/opensourceprojects/jubws/master/doc/images/intalio_console_runbenchmark.png)
 
 And than on Start.
-![](doc/images/intalio_console_input.png)
+![](https://raw.github.com/opensourceprojects/jubws/master/doc/images/intalio_console_input.png)
 
 
 * **path:** file:PATH_TO_JUBWS/jubws/benchmarks/target/benchmarks-1.0.0.jar
 * **classname:** de.htwaalen.benchmarks.FileAccessBenchmark
 * Click **Submit**.
 
-![](doc/images/intalio_console_result.png)
+![](https://raw.github.com/opensourceprojects/jubws/master/doc/images/intalio_console_result.png)
 
 
 
